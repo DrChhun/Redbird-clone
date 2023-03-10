@@ -1,0 +1,100 @@
+{
+    "newsData" : [
+        {
+            "id": 1,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "one តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 2,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "two កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 3,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "three កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 4,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "four កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 5,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "five កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 6,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "six កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 7,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "seven កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        },
+        {
+            "id": 8,
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "title": "eight កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ គីឡូម៉ែត្រ",
+            "tag": "អចលនទ្រព្យ",
+            "profile": {
+                "image": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "Bunthoen Koem",
+                "date": "March 2 2023",
+                "view": 50.2
+            }
+        }
+    ]
+}
