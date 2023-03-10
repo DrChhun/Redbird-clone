@@ -25,14 +25,17 @@ function Home() {
             </div>
 
             {/* most recent news */}
-            <div className="w-full px-10 py-12">
+            {/* <div className="w-full px-10 py-12 flex">
                 <div className="w-[65%]">
                     <Cover heading="sovankoko" img={"https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11"} link={"/"}>sovankoko</Cover>
                 </div>
-                <div className="w-[35%]">
-
+                <div className="w-[35%] grid">
+                    <div className="grid-cols-1">
+                        <Cover heading="sovankoko" img={"https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11"} link={"/"}>sovankoko</Cover>
+                        <Cover heading="sovankoko" img={"https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11"} link={"/"}>sovankoko</Cover>
+                    </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* category by content */}
             <div className="px-10 py-12 flex">
