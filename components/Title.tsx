@@ -6,11 +6,11 @@ const title = cva('', {
         size: {
             xs: "text-xs",
             sm: "text-sm",
-            base: "text-base",
-            lg: "text-lg",
-            xl: "text-xl",
-            xxl: "text-4xl",
-            xxxl: "text-5xl"
+            base: "lg:text-base",
+            lg: "lg:text-lg",
+            xl: "lg:text-xl",
+            xxl: "text-xl md:text-2xl lg:text-4xl",
+            xxxl: "text-2xl md:text-3xl lg:text-5xl"
         },
         weight: {
             light: 'font-light',
@@ -25,7 +25,7 @@ const title = cva('', {
         },
         lineHeight: {
             tight: 'leading-tight',
-            normal: 'leading-normal',
+            normal: 'leading-normal md:leading-[130%] lg:leading-[150%]',
             relaxed: 'leading-relaxed'
         }
     },
