@@ -24,6 +24,11 @@ const caption = cva('font-bold line-clamp-2', {
       white: 'text-white',
       black: 'text-black',
       red: 'text-red-500'
+    },
+    underlineColor: {
+      white: 'border-white w-[50px] border-2 my-4',
+      black: 'border-black w-[50px] border-2 my-4',
+      red: 'border-[#ed1c24] w-[50px] border-2 my-4'
     }
   }
 });
@@ -35,11 +40,12 @@ extends ButtonHTMLAttributes<HTMLButtonElement>,
   children: string
 }
 
-const Heading = ({ weight, size, children, underline, colors }: Heading) => {
+const Heading = ({ weight, size, children, underline, colors, underlineColor }: Heading) => {
   return (
     <div>
       <h1 className={caption({size, weight, colors})}>{children}</h1>
-      <hr className={classNames(`h-1 mt-4 bg-black border-[0]`, {'w-[50px]' : underline} )} />
+      <hr className={caption({underlineColor})} />
+      {/* <hr className={classNames(`h-1 mt-4 {underlineColor}`, {'w-[50px]' : underline} )} /> */}
     </div>
   );
 };

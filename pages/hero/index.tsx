@@ -25,7 +25,7 @@ function Hero () {
                 className="mySwiper h-[100vh]"
             >
                 <SwiperSlide className="aspect-video">
-                    <img className="relative h-full w-full object-cover brightness-50" src="https://business-cambodia.com/cms/assets/b966383e-bb33-478b-ab03-0af0ec710058" alt="" />
+                    <img className="relative h-full w-full object-cover brightness-[.30]" src="https://business-cambodia.com/cms/assets/b966383e-bb33-478b-ab03-0af0ec710058" alt="" />
                     <div className="absolute w-full md:w-3/4 lg:w-1/3 top-1/3 lg:top-1/4 p-10 md:pl-10">
                         <Title size="xxxl" lineHeight="normal" colors="white">អាមេរិកដំឡើងការប្រាក់ថែម! ទាំងនេះជាប្រទេសនឹងរងផលប៉ះពាល់បើអាមេរិកដំឡើងការប្រាក់ដល់៦%</Title>
                         <div className="my-5"><PostDetail author="Chhun" category="Technology" date="March 23 2023" colors="white" /></div>
@@ -36,7 +36,7 @@ function Hero () {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="">
-                    <img className="h-full w-full object-cover brightness-50" src="https://business-cambodia.com/cms/assets/e16aa577-32bf-4f12-b620-edd806f97d00" alt="" />
+                    <img className="h-full w-full object-cover brightness-[.30]" src="https://business-cambodia.com/cms/assets/e16aa577-32bf-4f12-b620-edd806f97d00" alt="" />
                     <div className="absolute w-full md:w-3/4 lg:w-1/3 top-1/3 lg:top-1/4 p-10 md:pl-10">
                         <Title size="xxxl" lineHeight="normal" colors="white">អាមេរិកដំឡើងការប្រាក់ថែម! ទាំងនេះជាប្រទេសនឹងរងផលប៉ះពាល់បើអាមេរិកដំឡើងការប្រាក់ដល់៦%</Title>
                         <div className="my-5"><PostDetail author="Chhun" category="Technology" date="March 23 2023" colors="white" /></div>
@@ -47,7 +47,7 @@ function Hero () {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="">
-                    <img className="h-full w-full object-cover brightness-50" src="https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11" alt="" />
+                    <img className="h-full w-full object-cover brightness-[.30]" src="https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11" alt="" />
                     <div className="absolute w-full md:w-3/4 lg:w-1/3 top-1/3 lg:top-1/4 p-10 md:pl-10">
                         <Title size="xxxl" lineHeight="normal" colors="white">អាមេរិកដំឡើងការប្រាក់ថែម! ទាំងនេះជាប្រទេសនឹងរងផលប៉ះពាល់បើអាមេរិកដំឡើងការប្រាក់ដល់៦%</Title>
                         <div className="my-5"><PostDetail author="Chhun" category="Technology" date="March 23 2023" colors="white" /></div>

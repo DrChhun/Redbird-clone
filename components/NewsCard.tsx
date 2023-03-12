@@ -25,7 +25,7 @@ const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
         height={196}
       />
       <div className="p-4">
-        <p className="bg-gray-200 w-max px-4 rounded-lg mb-2">#{tag}</p>
+        <p className="bg-gray-200 w-max px-4 rounded-lg mb-2 text-sm lg:text-base">#{tag}</p>
         <h1 className="font-bold text-lg line-clamp-2 hover:underline">
           {title}
         </h1>
