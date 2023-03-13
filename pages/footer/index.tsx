@@ -9,7 +9,7 @@ function Footer() {
                     <div className="text-center md:text-left mb-8 md:mb-0">
                         <h1 className="text-base md:text-lg font-bold">ស្វែងយល់អំពីពួកយើង</h1>
                         <p className="py-4">អំពីពួកយើង</p>
-                        <p>sam.businesscambodia@gmail.com</p>
+                        <p className="text-xs text:base">sam.businesscambodia@gmail.com</p>
                     </div>
                     <div className="text-center mb-8 md:mb-0">
                         <h1 className="text-base md:text-lg mb-4">អត្ថបទផ្សេងៗ</h1>
