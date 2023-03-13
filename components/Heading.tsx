@@ -8,7 +8,7 @@ const caption = cva('font-bold line-clamp-2', {
     size: {
       xs: "text-xs",
       sm: "text-sm",
-      base: "text-base",
+      base: "text-sm mg:text-base",
       lg: "text-lg",
       xl: "text-xl",
       xxl: "text-4xl",

@@ -6,7 +6,7 @@ const title = cva('', {
         size: {
             xs: "text-xs",
             sm: "text-sm",
-            base: "lg:text-base",
+            base: "text-xs lg:text-base",
             lg: "lg:text-lg",
             xl: "lg:text-xl",
             xxl: "text-xl md:text-2xl lg:text-4xl",
