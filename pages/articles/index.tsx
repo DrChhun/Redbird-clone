@@ -4,12 +4,12 @@ import Title from "@/components/Title"
 
 const Artical = () => {
     return (
-        <div className="px-36 py-28" >
+        <div className="px-10 py-24 md:px-18 md:py-24 lg:px-36 lg:py-28" >
             <Title size="xxxl" lineHeight="normal">
                     ស្អាតឆ្លាតពូកែ! និស្សិតស្រីវ័យ២១ឆ្នាំ រៀនផងឆ្លៀតធ្វើជំនួញក្រៅម៉ោងផង រកចំណូលជាង៥ម៉ឺន$/ឆ្នាំ
                 </Title>
                 <PostDetail author="Chhun" category="Business" date="13 Mar 2023" />
-            <div className="w-3/5">
+            <div className="md:w-3/5">
                 <img className="py-12" src="https://business-cambodia.com/cms/assets/548a253e-50f5-4887-81b2-519cc7278be6" alt="" />
                 <p>
                     ក្នុងខណៈពេលដែលមនុស្សជាច្រើនកំពុងធ្វើការសិក្សារៀនសូត្រគឺប្រាកដជាពិបាកខ្លាំងក្នុងការបែងចែកពេលវេលារៀនផងនិងធ្វើការផង។ ចំណែកឯនិស្សិតស្រីវ័យ ២១ឆ្នាំរូបនេះទាំងស្អាតទាំងឆ្លាត 

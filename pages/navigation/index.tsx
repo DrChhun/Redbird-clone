@@ -60,20 +60,20 @@ function Navigation() {
 
             {
                 ham?
-                <RxCross1 onClick={() => setHam(!ham)} className="text-white text-base md:text-3xl lg:text-4xl lg:hidden"/>
+                <RxCross1 onClick={() => setHam(!ham)} className={`${router.asPath.startsWith('/articles') ? 'text-black' : 'text-white'} text-base md:text-3xl lg:text-4xl lg:hidden`}/>
                 :
-                <RxHamburgerMenu onClick={() => setHam(!ham)} className="text-white text-base md:text-3xl lg:text-4xl lg:hidden" />
+                <RxHamburgerMenu onClick={() => setHam(!ham)} className={`${router.asPath.startsWith('/articles') ? 'text-black' : 'text-white'} text-base md:text-3xl lg:text-4xl lg:hidden`} />
             }
 
                 <div className={(ham? "z-[-1] h-screen bg-black opacity-80 fixed w-full top-0 left-0 duration-300": "z-[-1] h-screen bg-black opacity-80 fixed w-full top-0 left-[-100%] duration-300")}>
                     <div className="w-full h-full relative">
                         <ul className="text-white flex flex-col text-center absolute left-1/2 translate-x-[-50%] translate-y-[-50%] top-1/2">
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/news">ព័ត៌មានថ្មីៗ</Link>
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/real-estate">អចលនទ្រព្យ</Link>
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/leadership">ភាពជាអ្នកដឹកនាំ</Link>
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/finance">ហិរញ្ញវត្ថុ</Link>
-                            <Link onClick={() => setHam(!ham)} className="mx-5 hover:border-b-2 duration-200" href="/sales">កំពូលអ្នកលក់</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/news">ព័ត៌មានថ្មីៗ</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/real-estate">អចលនទ្រព្យ</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/leadership">ភាពជាអ្នកដឹកនាំ</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/finance">ហិរញ្ញវត្ថុ</Link>
+                            <Link onClick={() => setHam(!ham)} className="my-2 hover:border-b-2 duration-200" href="/sales">កំពូលអ្នកលក់</Link>
                         </ul>
                     </div>
                 </div>
