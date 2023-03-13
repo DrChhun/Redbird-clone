@@ -16,9 +16,14 @@ function Home() {
     const [windowWidth, setInnerWidth] = useState<any>();
 
     useEffect(() => {
-        let vh = window.innerWidth;
-        setInnerWidth(vh);
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        let vw = window.innerWidth;
+        if (vw != windowWidth) {
+            setInnerWidth(vw);
+        } else {
+            setInnerWidth(windowWidth);
+        }
+    
+        document.documentElement.style.setProperty('--vh', `${vw}px`);
     }, [])
 
     console.log(windowWidth);
@@ -38,7 +43,7 @@ function Home() {
             </div>
             <div className="flex justify-between px-10 py-12">
                 <Title size="xxl" weight="bold">អត្ថបទពេញនិយមសរុប</Title>
-                <a href="">មើលបន្ថែម</a>
+                <a className="text-red-500" href="#">មើលបន្ថែម</a>
             </div>
 
             {/* most recent news */}
