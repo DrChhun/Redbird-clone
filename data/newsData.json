@@ -1,0 +1,230 @@
+{
+    "newsData": [
+        {
+            "title": "កំណាត់ផ្លូវជាតិលេខ៧ តភ្ជាប់ខេត្ដ ២ នេះ នឹងត្រូវសាងសង់ថ្មីមានប្រវែងជិត ១០០ គីឡូម៉ែត្រ",
+            "date": "MARCH 2 2023",
+            "category": "អចលនទ្រព្យ",
+            "image": "https://business-cambodia.com/cms/assets/41904f1a-e2f7-4eec-8425-58dc24c6c134",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ចូលចាក់សាំងរាល់ថ្ងៃ! មកស្គាល់មេធំ ស្ថានីយ៍ប្រេងឥន្ធនៈយីហោយក្ស៣ ឈរជើងរកស៊ីក្នុងស្រុកខ្មែររាប់សិបឆ្នាំ",
+            "date": "MARCH 1 2023",
+            "category": "ភាពជាអ្នកដឹកនាំ",
+            "image": "https://business-cambodia.com/cms/assets/7d5fbfd9-319d-4154-82a8-b96888b0d6c3",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ក្រុមហ៊ុននាំចូលផ្តាច់មុខឡាន Mercedes-Benz សម្រេចបញ្ចប់ដំណើរការនៅកម្ពុជា ដោយឱ្យក្រុមហ៊ុនថ្មី ផ្តល់សេវាកម្មជំនួស",
+            "date": "MARCH 1 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/0b1ac048-f6a5-41fc-bb8a-60c7ed706cd1",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ],
+    "business": [
+        {
+            "title": "អ្នករកស៊ី ត្រូវប្រយ័ត្ន! នេះជាចំណុចស្លា.ប់រស់ ៣ ដែលអ្នករកស៊ីភាគច្រើនតែងតែធ្វើពេលលក់បញ្ចុះតម្លៃ",
+            "date": "MARCH 9 2023",
+            "category": "ចាប់ផ្តើមអាជីវកម្ម",
+            "image": "https://business-cambodia.com/cms/assets/73edd592-ca92-4733-a43f-4b4e0c86dc8d",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ចំណុចខ្លាំងពីរបស់ DOMINO PIZZA ដែលធ្វើអោយយីហោមួយនេះពង្រីកបាន ១ ម៉ឺនសាខាលើពិភពលោក",
+            "date": "MARCH 5 2023",
+            "category": "ចាប់ផ្តើមអាជីវកម្ម",
+            "image": "https://business-cambodia.com/cms/assets/9adbdc22-fee0-4308-8a00-64197287fb7e",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ប្រើកម្មវិធី Pinterest រាល់ថ្ងៃ មានដឹងអត់ថាកម្មវិធីមួយនេះ រកចំណូលតាមណា ហើយអាចរកបានប៉ុន្មាន?",
+            "date": "MARCH 3 2023",
+            "category": "ចាប់ផ្តើមអាជីវកម្ម",
+            "image": "https://business-cambodia.com/cms/assets/468135a4-fd57-4d9f-abde-c9d52fbf6945",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ],
+    "estate": [
+        {
+            "title": "មិនទាន់មាននៅខ្មែរ! ផ្លូវរថភ្លើងទំនើបៗទាំងនេះត្រូវបានក្រសួងសាធារណការ កំពុងធ្វើសិក្សាសម្រាប់ការសាងសង់នាពេលខាងមុខ",
+            "date": "MARCH 12 2023",
+            "category": "អចលនទ្រព្យ",
+            "image": "https://business-cambodia.com/cms/assets/f2e8c45f-d6a1-4840-b66a-50a6bf9920f1",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "រស់នៅកណ្ដាលក្រុងនិងជាយក្រុងមួយណាចំណេញជាង ខណៈនេះជាផលវិជ្ជមាននៃទីតាំងទាំង២",
+            "date": "MARCH 6 2023",
+            "category": "អចលនទ្រព្យ",
+            "image": "https://business-cambodia.com/cms/assets/6cf09c24-228e-4ef6-b0c5-52b65a108c83",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ទូតជប៉ុនថា ឃ្លាំងទំនិញក្រុមហ៊ុន AEON បានកំពុងសាងសង់នៅក្នុងតំបន់សេដ្ឋកិច្ចពិសេសក្រុងព្រះសីហនុ",
+            "date": "MARCH 1 2023",
+            "category": "អចលនទ្រព្យ",
+            "image": "https://business-cambodia.com/cms/assets/cbc330e1-163d-45b7-862a-6f14cb86a735",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ],
+    "leadership": [
+        {
+            "title": "ស្ងាត់ៗ! សេដ្ឋីបាល់ទាត់ Honda ចង់បោះទុនរកស៊ីបន្ថែម នៅក្នុងប្រទេស២នេះ",
+            "date": "MARCH 14 2023",
+            "category": "ភាពជាអ្នកដឹកនាំ",
+            "image": "https://business-cambodia.com/cms/assets/a5cb21eb-9d5e-4a7b-a089-9797fb6567a6",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "វ័យ៤៣ឆ្នាំហើយ នៅស្អាត! តួអង្គទាវឆាន តាមពិតគឺជាសេដ្ឋីលាក់ខ្លួន មានទ្រព្យលានដុល្លារ",
+            "date": "MARCH 13 2023",
+            "category": "ភាពជាអ្នកដឹកនាំ",
+            "image": "https://business-cambodia.com/cms/assets/721f3506-2c0f-411f-b2fe-75457cbda7de",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "មកស្គាល់ CEO ធនាគារ រកស៊ីខាងវិស័យគ្រីបតូ ដែលទើបប្រកាសក្ស័យធន កាលពីពេលថ្មីៗនេះ",
+            "date": "MARCH 13 2023",
+            "category": "ភាពជាអ្នកដឹកនាំ",
+            "image": "https://business-cambodia.com/cms/assets/b20ad78f-7016-40c4-95cb-c4ad3f8f5622",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ],
+    "finance": [
+        {
+            "title": "គួរឲ្យសោកស្ដាយ! មិនដល់មួយខែស្រួលបួលផង ធនាគារធំៗ៣របស់សហរដ្ឋអាមេរិកដួលរលំព្រមៗគ្នា",
+            "date": "MARCH 13 2023",
+            "category": "ហិរញ្ញវត្ថុ",
+            "image": "https://business-cambodia.com/cms/assets/e731e9a8-3de5-4808-b7b9-c90a236b7a81",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ធនាគារលំដាប់កំពូល FTB វិនិយោគលុយ១១២លាន$ សង់អគារកម្ពស់ជិត១០០ម៉ែត្រ ក្បែរអគារកាណាឌីយ៉ា",
+            "date": "MARCH 13 2023",
+            "category": "ហិរញ្ញវត្ថុ",
+            "image": "https://business-cambodia.com/cms/assets/424f74c8-a963-44b3-b13a-a6546d046275",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ល្បីអ្នកមានទុកលុយនៅធនាគារស្វីស! មកស្គាល់ធនាគារកំពូល៥នៅស្វីសអ្នកមានយកលុយទៅទុក",
+            "date": "MARCH 3 2023",
+            "category": "ហិរញ្ញវត្ថុ",
+            "image": "https://business-cambodia.com/cms/assets/1e7b9284-f475-4eb1-8921-d15a38a4b7fd",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ],
+    "sales": [
+        {
+            "title": "មើលបានតែ១ម៉ោងទេ! TikTok កំណត់ឱ្យក្មេងក្រោម១៨ឆ្នាំ អាចប្រើប្រាស់បានត្រឹមតែ១ម៉ោងក្នុង១ថ្ងៃប៉ុណ្ណោះ",
+            "date": "MARCH 9 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/a1df1944-2fbc-4114-8727-4b938f4d7f11",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "អេមមែន! បន្ទាប់ពី Touch ID និង Face ID ពេលនេះ Apple គ្រោងនឹងដាក់ Body ID ដើម្បីឆែកមើលសុខភាពថែមទៀត",
+            "date": "MARCH 7 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/876b64e2-fa90-4456-beda-b9c30920ee2d",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "លក់ដោយមិនបាច់លក់! អ្នកជំនាញបង្ហើបថាអ្នកលក់ឱ្យតែមានចំណុចខ្លាំង៣នេះហើយ មិនពិបាកលក់ទៀតទេ",
+            "date": "MARCH 6 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/5591787a-2b06-4951-89da-a3558823a3a5",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
+    ]
+}

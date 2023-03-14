@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans' : ['Hanuman', 'serif']
+    },
     extend: {},
     container: {
       padding: {
