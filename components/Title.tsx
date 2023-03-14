@@ -10,7 +10,8 @@ const title = cva('', {
             lg: "font-sans lg:text-lg",
             xl: "font-sans lg:text-xl",
             xxl: "font-sans text-xl md:text-2xl lg:text-4xl",
-            xxxl: "font-sans text-2xl md:text-3xl lg:text-5xl"
+            xxxl: "font-sans text-2xl md:text-3xl lg:text-5xl",
+            coverFirst: "font-sans text-xs md:text-2xl lg:text-4xl"
         },
         weight: {
             light: 'font-light',
