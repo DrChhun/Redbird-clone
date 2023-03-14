@@ -96,6 +96,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -104,6 +109,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {newsData.map((x) => 
                      (
@@ -147,6 +153,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -155,6 +166,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {business.map((x) => 
                      (
@@ -198,6 +210,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -206,6 +223,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {estate.map((x) => 
                      (
@@ -249,6 +267,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -257,6 +280,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {leadership.map((x) => 
                      (
@@ -300,6 +324,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -308,6 +337,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {finance.map((x) => 
                      (
@@ -351,6 +381,11 @@ function Home() {
                   dynamicBullets: true,
                 }}
                 breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 25,
+                    },
                     600: {
                       slidesPerView: 2,
                       slidesPerGroup: 2,
@@ -359,6 +394,7 @@ function Home() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
+                style={{padding: "2rem 0"}}
               >
                 {sales.map((x) => 
                      (

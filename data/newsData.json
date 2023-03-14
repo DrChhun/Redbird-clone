@@ -226,5 +226,43 @@
                 "bio": "I love Cambodia"
             }
         }
+    ],
+    "popular": [
+        {
+            "title": "OWNDAYS ម៉ាកវ៉ែនតាឈានមុខគេរបស់ជប៉ុន ឥឡូវនេះបានមកដល់ The Peak ហើយ",
+            "date": "MARCH 9 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/d4c27f3f-971a-4d16-9678-ea608ab212b3",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ក្រោយ MJQE ឡើងផ្សារហ៊ុន អ្នកឧកញ៉ា គួច ម៉េងលី ថានឹងបើកសាលាពេទ្យនិងសាកលវិទ្យាល័យច្រើនទៀត",
+            "date": "MARCH 7 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/35fbd842-3e4c-4400-bc03-ff926238b63d",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        },
+        {
+            "title": "ពង្រីកខ្លួនជាង១០សាខានៅខ្មែរ Ice-Watch ប្រើយុទ្ធសាស្រ្តលក់៣នេះ អាចលក់ដាច់ខ្លាំង នៅក្នុងទីផ្សារ",
+            "date": "MARCH 6 2023",
+            "category": "កំពូលអ្នកលក់",
+            "image": "https://business-cambodia.com/cms/assets/cc4294e4-08d1-4cab-b73d-53faa3e99ac8",
+            "author": {
+                "profile": "https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                "name": "SovanKOKO",
+                "view": "168",
+                "bio": "I love Cambodia"
+            }
+        }
     ]
 }
