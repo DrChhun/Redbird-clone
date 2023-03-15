@@ -17,7 +17,7 @@ const ArticleDetail = () => {
                         <div className="md:w-3/4 lg:w-3/5">
                             <img className="py-12" src={data.image} alt="" />
                             <PostDetail author="not dynamic" category={data.category} date={data.date}/>
-                            <p className="py-12">{data.content}</p>
+                            <p className="py-12 break-all">{data.content}</p>
                         </div>
                     </div>
                 )
