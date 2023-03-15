@@ -10,14 +10,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import {newsData} from '../../data/newsData.json'
-import {business} from '../../data/newsData.json'
-import {estate} from '../../data/newsData.json'
-import {leadership} from '../../data/newsData.json'
-import {finance} from '../../data/newsData.json'
-import {sales} from '../../data/newsData.json'
+import {contentData} from '../../data/contentData.json'
 
 function Home() {
+
+    const sales = contentData.filter(get => get.type == "sales")
+    const finance = contentData.filter(get => get.type == "finance")
+    const leadership = contentData.filter(get => get.type == "leadership")
+    const estate = contentData.filter(get => get.type == "estate")
+    const business = contentData.filter(get => get.type == "business")
+    const newsData = contentData.filter(get => get.type == "new")
 
     const [windowWidth, setInnerWidth] = useState<any>();
 
@@ -30,6 +32,7 @@ function Home() {
         }
     
         document.documentElement.style.setProperty('--vh', `${vw}px`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     console.log(windowWidth);
@@ -80,7 +83,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {newsData.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -137,7 +140,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {business.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -194,7 +197,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {estate.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -251,7 +254,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {leadership.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -308,7 +311,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {finance.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -365,7 +368,7 @@ function Home() {
                     </div>
                 </div>
                 {windowWidth > 768 ?
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {sales.map((x) => (
                             <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
