@@ -11,6 +11,7 @@ import LeadershipCategory from "@/components/category/LeadershipCategory"
 import SaleCategory from "@/components/category/SaleCategory"
 import FinanceCategory from "@/components/category/FinanceCategory"
 import RecentNews from "@/components/category/RecentNews"
+import Link from "next/link";
 
 function Home() {
     
@@ -28,7 +29,7 @@ function Home() {
             </div>
             <div className="flex justify-between px-4 lg:px-10 py-12">
                 <Title size="xxl" weight="bold">អត្ថបទពេញនិយមសរុប</Title>
-                <a className="text-red-500" href="#">មើលបន្ថែម</a>
+                <Link className="text-red-500" href="/articles">មើលបន្ថែម</Link>
             </div>
 
             {/* most recent news */}
