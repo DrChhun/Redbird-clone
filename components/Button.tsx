@@ -18,7 +18,7 @@ interface ButtonProps
 extends ButtonHTMLAttributes<HTMLButtonElement>, 
     VariantProps<typeof button> {
         children: string
-        url: string // this code mean define type automaticly from the button function
+        url?: string // this code mean define type automaticly from the button function
 }
 
 const Button = ({children, styles, url}: ButtonProps) => <a href={`${url}`}><button className={button({styles})}>{children}</button></a>
