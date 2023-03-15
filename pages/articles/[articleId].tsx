@@ -9,14 +9,16 @@ const ArticleDetail = () => {
     const data = contentData.filter(get => get.id == articleId);
     console.log(data)
     return (
-        <div className="py-12 lg:py-24 px-4 lg:px-10">
+        <div className="py-12 py-24 lg:py-24 px-4 lg:px-36">
             {data.map((data) => {
                 return (
                     <div key={data.id}>
-                        <Title size="xxxl">{data.title}</Title>
-                        <img className="py-12" src={data.image} alt="" />
-                        <PostDetail author="not dynamic" category={data.category} date={data.date}/>
-                        <p className="py-12">{data.content}</p>
+                        <Title lineHeight="normal" size="xxxl">{data.title}</Title>
+                        <div className="md:w-3/4 lg:w-3/5">
+                            <img className="py-12" src={data.image} alt="" />
+                            <PostDetail author="not dynamic" category={data.category} date={data.date}/>
+                            <p className="py-12">{data.content}</p>
+                        </div>
                     </div>
                 )
             })}
