@@ -34,8 +34,8 @@ function Hero () {
                             <Title size="xxxl" lineHeight="normal" colors="white">{data.title}</Title>
                             <div className="my-5"><PostDetail author={data.author.name} category={data.category} date={data.date} colors="white" /></div>
                             <div className="flex">
-                                <div className="mr-5"><Button styles="fill">បន្តការអាន</Button></div>
-                                <Button styles="transparent">អំពីអ្នកនិពន្ធ</Button>
+                                <div className="mr-5"><Button url="#" styles="fill">បន្តការអាន</Button></div>
+                                <Button url="#" styles="transparent">អំពីអ្នកនិពន្ធ</Button>
                             </div>
                         </div>
                     </SwiperSlide>
