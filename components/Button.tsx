@@ -1,4 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority"
+import Link from "next/link";
 import React, { ButtonHTMLAttributes } from "react"
 
 const button = cva("text-xs md:text-base lg:text-lg py-2 px-10 font-medium md:mt-4 duration-300 border-2", {
@@ -21,5 +22,5 @@ extends ButtonHTMLAttributes<HTMLButtonElement>,
         url?: string // this code mean define type automaticly from the button function
 }
 
-const Button = ({children, styles, url}: ButtonProps) => <a href={`${url}`}><button className={button({styles})}>{children}</button></a>
+const Button = ({children, styles, url}: ButtonProps) => <Link href={`${url}`}><button className={button({styles})}>{children}</button></Link>
 export default Button

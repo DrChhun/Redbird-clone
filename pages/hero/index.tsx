@@ -7,9 +7,12 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import Title from "@/components/Title";
 import PostDetail from "@/components/PostDetail";
 import Button from "@/components/Button";
-import {popular} from '../../data/newsData.json'
+import {contentData} from '../../data/contentData.json'
 
 function Hero () {
+
+    const popular = contentData.filter(get => get.type == "popular")
+
     return (
         <>
             <Swiper
@@ -34,8 +37,8 @@ function Hero () {
                             <Title size="xxxl" lineHeight="normal" colors="white">{data.title}</Title>
                             <div className="my-5"><PostDetail author={data.author.name} category={data.category} date={data.date} colors="white" /></div>
                             <div className="flex">
-                                <div className="mr-5"><Button url="#" styles="fill">បន្តការអាន</Button></div>
-                                <Button url="#" styles="transparent">អំពីអ្នកនិពន្ធ</Button>
+                                <div className="mr-5"><Button url={`articles/${data.id}`} styles="fill">បន្តការអាន</Button></div>
+                                <Button url={`articles/${data.id}`} styles="transparent">អំពីអ្នកនិពន្ធ</Button>
                             </div>
                         </div>
                     </SwiperSlide>
