@@ -4,14 +4,14 @@ import { ButtonHTMLAttributes, Children } from "react"
 const title = cva('', {
     variants: {
         size: {
-            xs: "font-sans text-xs",
-            sm: "font-sans text-sm",
-            base: "font-sans text-xs lg:text-base",
-            lg: "font-sans lg:text-lg",
+            xs: "font-sans text-xs break-all",
+            sm: "font-sans text-sm break-all",
+            base: "font-sans text-xs lg:text-base break-all",
+            lg: "font-sans lg:text-lg break-all",
             xl: "font-sans lg:text-xl",
-            xxl: "font-sans text-xl md:text-2xl lg:text-4xl",
-            xxxl: "font-sans text-2xl md:text-3xl lg:text-5xl",
-            coverFirst: "font-sans text-xs md:text-2xl lg:text-4xl"
+            xxl: "font-sans text-xl md:text-2xl lg:text-4xl break-all",
+            xxxl: "font-sans text-2xl md:text-3xl lg:text-5xl break-all",
+            coverFirst: "font-sans text-xs md:text-2xl lg:text-4xl break-all"
         },
         weight: {
             light: 'font-light',
