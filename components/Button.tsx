@@ -17,9 +17,9 @@ const button = cva("text-xs md:text-base lg:text-lg py-2 px-10 font-medium md:mt
 interface ButtonProps 
 extends ButtonHTMLAttributes<HTMLButtonElement>, 
     VariantProps<typeof button> {
-        children: string // this code mean define type automaticly from the button function
+        children: string
+        url: string // this code mean define type automaticly from the button function
 }
 
-const Button = ({children, styles}: ButtonProps) => <button className={button({styles})}>{children}</button>
-
+const Button = ({children, styles, url}: ButtonProps) => <a href={`${url}`}><button className={button({styles})}>{children}</button></a>
 export default Button

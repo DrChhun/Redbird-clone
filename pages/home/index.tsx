@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import {contentData} from '../../data/contentData.json'
+import Link from "next/link"
 
 function Home() {
 
@@ -79,18 +80,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">អត្ថបទពេញនិយមប្រចាំខែ</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="/news" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {newsData.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />
+                            <Link key={x.title} href={`/articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -117,12 +120,14 @@ function Home() {
                 {newsData.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`/articles/${x.id}`}>
+                                <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />  
+                            </Link>      
                         </SwiperSlide>
                     )
                 )}
@@ -136,18 +141,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">ចាប់ផ្តើមអាជីវកម្ម</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="/business" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {business.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                            <Link key={x.title} href={`/articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
                                 name: "fortnite",
                                 date: "March 23 2023",
                                 view: 999
                             }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -174,12 +181,14 @@ function Home() {
                 {business.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`articles/${x.id}`}>
+                                <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />        
+                            </Link>
                         </SwiperSlide>
                     )
                 )}
@@ -193,18 +202,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">អចលនទ្រព្យ</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="real-estate" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {estate.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />
+                            <Link key={x.id} href={`articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -231,12 +242,14 @@ function Home() {
                 {estate.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`articles/${x.id}`}>
+                                <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />    
+                            </Link>    
                         </SwiperSlide>
                     )
                 )}
@@ -250,18 +263,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">ភាពជាអ្នកដឹកនាំ</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="/leadership" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {leadership.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />
+                            <Link key={x.id} href={`articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -288,12 +303,14 @@ function Home() {
                 {leadership.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`articles/${x.id}`}>
+                                <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />     
+                            </Link>   
                         </SwiperSlide>
                     )
                 )}
@@ -307,18 +324,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">ហិរញ្ញវត្ថុ</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="/finance" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {finance.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />
+                            <Link key={x.id} href={`articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -345,12 +364,14 @@ function Home() {
                 {finance.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} title={x.title} image={x.image} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`articles/${x.id}`}>
+                                <NewsCard id={0} title={x.title} image={x.image} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />     
+                            </Link>   
                         </SwiperSlide>
                     )
                 )}
@@ -364,18 +385,20 @@ function Home() {
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
                         <Heading underlineColor="black" underline size="lg" weight="bold">កំពូលអ្នកលក់</Heading>
-                        <Button styles="border">មើលបន្ថែម</Button>
+                        <Button url="/sales" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
                         {sales.map((x) => (
-                            <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />
+                            <Link key={x.id} href={`articles/${x.id}`}>
+                                <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />
+                            </Link>
                         ))}
                     </div>
                 :
@@ -402,12 +425,14 @@ function Home() {
                 {sales.map((x) => 
                      (
                         <SwiperSlide key={x.title}>
-                            <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
-                                image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                name: "fortnite",
-                                date: "March 23 2023",
-                                view: 999
-                            }} />        
+                            <Link href={`articles/${x.id}`}>
+                                <NewsCard id={0} image={x.image} title={x.title} tag={x.category} profile={{
+                                    image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
+                                    name: "fortnite",
+                                    date: "March 23 2023",
+                                    view: 999
+                                }} />  
+                            </Link>      
                         </SwiperSlide>
                     )
                 )}
