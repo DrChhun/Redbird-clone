@@ -1,6 +1,4 @@
-import button from "@/pages/button";
 import { cva, VariantProps } from "class-variance-authority";
-import classNames from "classnames";
 import { ButtonHTMLAttributes } from "react";
 
 const caption = cva('font-bold line-clamp-2', {
