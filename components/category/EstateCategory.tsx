@@ -11,7 +11,9 @@ import {contentData} from '../../data/contentData.json'
 
 const EstateCategory = () => {
 
-    const estate = contentData.filter(get => get.type == "estate")
+    const data = contentData.filter(get => get.type == "estate")
+
+    const estate = data.splice(0, 4)
 
     const [windowWidth, setInnerWidth] = useState<any>();
 

@@ -10,8 +10,10 @@ import NewsCard from "../NewsCard"
 import {contentData} from '../../data/contentData.json'
 
 const NewCategory = () => {
+
+    const data = contentData.filter(get => get.type == "new")
     
-    const newsData = contentData.filter(get => get.type == "new")
+    const newsData = data.splice(0, 4);
 
     const [windowWidth, setInnerWidth] = useState<any>();
 

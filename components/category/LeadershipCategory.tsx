@@ -11,7 +11,9 @@ import {contentData} from '../../data/contentData.json'
 
 const LeadershipCategory = () => {
 
-    const leadership = contentData.filter(get => get.type == "leadership")
+    const data = contentData.filter(get => get.type == "leadership")
+
+    const leadership = data.splice(0, 4)
 
     const [windowWidth, setInnerWidth] = useState<any>();
 

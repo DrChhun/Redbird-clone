@@ -11,7 +11,9 @@ import {contentData} from '../../data/contentData.json'
 
 const FinanceCategory = () => {
 
-    const finance = contentData.filter(get => get.type == "finance")
+    const data = contentData.filter(get => get.type == "finance")
+
+    const finance = data.splice(0, 4)
 
     const [windowWidth, setInnerWidth] = useState<any>();
 
