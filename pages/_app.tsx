@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Footer from './footer'
-import Navigation from './navigation'
+import Footer from '../components/footer'
+import Navigation from '../components/navigation'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

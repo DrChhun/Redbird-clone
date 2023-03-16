@@ -33,7 +33,7 @@ const BusinessCategory = () => {
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">
                 <div className="flex mb-5 lg:mb-0 items-center lg:mb-5 xl:mb-0 xl:w-[25%]">
                     <div className="flex justify-between w-full xl:flex-col xl:w-[50%]">
-                        <Heading underlineColor="black" underline size="lg" weight="bold">ចាប់ផ្តើមអាជីវកម្ម</Heading>
+                        <Heading underlineColor="black" underline size="xl" weight="bold">ចាប់ផ្តើមអាជីវកម្ម</Heading>
                         <Button url="/business" styles="border">មើលបន្ថែម</Button>
                     </div>
                 </div>

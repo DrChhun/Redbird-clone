@@ -1,4 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority"
+import Image from "next/image"
 import { ButtonHTMLAttributes } from "react"
 
 const heading = cva("text-base", {
@@ -12,7 +13,7 @@ const heading = cva("text-base", {
             sm: "font-sans text-sm",
             base: "font-sans text-xs lg:text-base",
             lg: "font-sans lg:text-lg",
-            xl: "font-sans lg:text-xl",
+            xl: "font-sans lg:text-2xl",
             xxl: "font-sans text-xl md:text-2xl lg:text-4xl",
             xxxl: "font-sans text-2xl md:text-3xl lg:text-5xl"
         },
@@ -36,7 +37,7 @@ const Banner = ({image, children, colors, weight, size}: Props) => {
     return (
         <>
             <div className="relative">
-                <img className="relative h-[300px] w-full object-cover brightness-50" src={image} alt="" />
+                <Image fill className="!relative !h-[300px] w-full object-cover brightness-50" src={image} alt="" />
                 <div className="absolute top-1/2 px-10">
                     <h1 className={heading({colors, weight, size})}>{children}</h1>
                 </div>

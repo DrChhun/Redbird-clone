@@ -9,12 +9,12 @@ const RecentNews = () => {
                     </Cover>
                 </div>
                 <div className="md:col-span-5 h-[300px] md:h-full">
-                    <Cover underlineColor="red" heading="ព័ត៌មានថ្មីៗ" img={"https://business-cambodia.com/cms/assets/5de32954-bdf1-4dac-b97c-2c72978af0d1"} link={"articles/23"} fontSize="base">
+                    <Cover underlineColor="red" heading="ព័ត៌មានថ្មីៗ" img={"https://business-cambodia.com/cms/assets/5de32954-bdf1-4dac-b97c-2c72978af0d1"} link={"articles/23"} fontSize="xl">
                         ចេញចូលភ្នំពេញត្រូវដឹង! នៅថ្ងៃទី២៩ ធ្នូ រដ្ឋបាលរាជធានីភ្នំពេញនឹងផ្អាកចរាចរយានជំនិះគ្រប់ប្រភេទលើកំណាត់មហាវិថីឈ្នះឈ្នះ
                     </Cover>
                 </div>
                 <div className="md:col-span-5 h-[300px] md:h-full">
-                    <Cover underlineColor="red" heading="ព័ត៌មានថ្មីៗ" img={"https://business-cambodia.com/cms/assets/f4e963dd-fc7d-4641-a3bf-265ef1288ec4"} link={"articles/24"} fontSize="base">
+                    <Cover underlineColor="red" heading="ព័ត៌មានថ្មីៗ" img={"https://business-cambodia.com/cms/assets/f4e963dd-fc7d-4641-a3bf-265ef1288ec4"} link={"articles/24"} fontSize="xl">
                         កាន់តែងាយស្រួល! អ្នកដែលមានសំបុត្រកំណើតសរសេរខុស អាចទៅកែថ្មីនៅកន្លែងនេះបាន
                     </Cover>
                 </div>

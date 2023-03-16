@@ -15,18 +15,18 @@ const loader = ({src}: any) => {
 
 const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
   <>
-    <div className="flex justify-center flex-col m-auto bg-white shadow-xl rounded-xl hover:shadow-lg duration-300 hover:cursor-pointer overflow-hidden group">
+    <div className="flex justify-between flex-col m-auto bg-white shadow-xl rounded-xl hover:shadow-lg duration-300 hover:cursor-pointer overflow-hidden group min-h-[405px] md:min-h-[350px] lg:min-h-[360px]">
       <Image
         loader={loader}
-        className="rounded-sm mb-4 group-hover:scale-105 duration-300 w-full"
+        className="rounded-sm group-hover:scale-105 duration-300 w-full"
         src={image}
         alt="tech-bodia"
         width={300}
         height={196}
       />
       <div className="p-4">
-        <p className="bg-gray-200 w-max px-4 rounded-lg mb-2 text-sm lg:text-base">#{tag}</p>
-        <h1 className="font-bold text-lg line-clamp-2 hover:underline">
+        <p className="bg-gray-200 w-max px-4 pt-1 rounded-lg mb-4 text-xs">#{tag}</p>
+        <h1 className="font-bold text-base text-gray-600 line-clamp-2 hover:underline">
           {title}
         </h1>
         <CardProfile
