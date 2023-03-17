@@ -19,7 +19,7 @@ const Business = () => {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/2a73c151-2cd8-45a3-b2ae-da99988606dd">
+            <Banner colors="white" size="xl" weight="bold" image="/B-1.jpeg">
                 នាំមនុស្សស្រមៃអោយធំ ចាប់ផ្តើមអោយតូច ពង្រីកអោយធំ
             </Banner>
 

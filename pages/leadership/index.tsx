@@ -19,7 +19,7 @@ function Leadership() {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/84756cab-d307-474f-bd21-8060b0fb1220">
+            <Banner colors="white" size="xl" weight="bold" image="/B-5.jpeg">
                 បំផុសគំនិតក្នុងការដឹកនាំ នាំមនុស្សធម្មតា ក្លាយជា CEO ឆ្នើម
             </Banner>
 

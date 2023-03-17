@@ -19,7 +19,7 @@ function Real() {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/dbc6c3fb-3963-4f7a-b76c-7f1fc9c32c78">
+            <Banner colors="white" size="xl" weight="bold" image="/B-4.jpeg">
                 បំផុសគំនិតរកសុីក្នុងវិស័យអចលនទ្រព្យ និងការវិនិយោគ
             </Banner>
 

@@ -19,7 +19,7 @@ function Sales() {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/eea71961-2858-41bb-b741-d4e4085aaf18">
+            <Banner colors="white" size="xl" weight="bold" image="/B-6.jpeg">
                 នាំមនុស្សគិតពីយុទ្ធសាស្រ្តលក់ ក្លាយជាកំពូលអ្នកលក់ឆ្នើម
             </Banner>
 

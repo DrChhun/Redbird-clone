@@ -19,7 +19,7 @@ function Finance() {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/87b496ef-ebb7-4085-80b5-84d09176fbf7">
+            <Banner colors="white" size="xl" weight="bold" image="/B-2.jpeg">
                 នាំប្រជាជនខ្មែរ យល់ពីចំណេះដឹងហិរញ្ញវត្ថុ តាមឱ្យទាន់របត់បច្ចេកវិទ្យា
             </Banner>
             

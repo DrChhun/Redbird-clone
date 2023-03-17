@@ -19,7 +19,7 @@ function News() {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/8812fd3e-50da-4b00-bd05-66a20b3f8241">
+            <Banner colors="white" size="xl" weight="bold" image="/B-3.jpeg">
                 បំផុសសកម្មភាពអាជីវកម្មថ្មីៗទាំងនៅក្នុងស្រុក និងក្រៅស្រុក
             </Banner>
 
