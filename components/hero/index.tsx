@@ -24,6 +24,7 @@ function Hero () {
                 pagination={{
                 clickable: true,
                 }}
+                spaceBetween={0}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper h-[100vh] bg-white home-slider"
