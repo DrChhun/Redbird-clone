@@ -32,6 +32,7 @@ function Hero () {
                 {popular.map((data) => (
                     <SwiperSlide key={data.title} className="aspect-video">
                         <Image 
+                            loading="lazy"
                             fill
                             className="relative object-cover h-full w-full brightness-[.30]" 
                             src={data.image} 
