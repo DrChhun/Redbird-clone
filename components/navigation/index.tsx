@@ -30,12 +30,13 @@ function Navigation() {
         return () => window.removeEventListener('scroll', handleScroll)
     })
 
-    console.log(prevScrollPos)
+    // console.log(prevScrollPos)
 
-    console.log(router.asPath);
+    // console.log('this is route', router.asPath);
+    // console.log('test route', router.asPath == 'articles', "gg")
 
     return (
-        <div className={`fixed px-6 py-4 z-[9] w-full flex justify-between items-center duration-300 ${router.asPath = "/articles" ? 'text-white' : ""} ${router.asPath.startsWith('/articles') ? 'bg-white shadow-md' : ""} ${!visible ? 'top-[-15%]': "top-0 bg-white shadow-sm" } ${prevScrollPos == 0 ? '!bg-transparent': ""}`}>
+        <div className={`fixed px-6 py-4 z-[9] w-full flex justify-between items-center duration-300 ${router.asPath.startsWith("/articles") ? 'text-white' : ""} ${router.asPath.startsWith('/articles') ? 'bg-white shadow-md' : ""} ${!visible ? 'top-[-15%]': "top-0 bg-white shadow-sm" } ${prevScrollPos == 0 ? '!bg-transparent': ""}`}>
             
             <Link href="/">
                 <Image fill className="!relative !w-20 !h-12" src="https://business-cambodia.com/BC.png" alt="" />
@@ -43,12 +44,12 @@ function Navigation() {
             
         {router.asPath.startsWith('/articles') ? 
             <ul className="hidden lg:flex items-center text-white duration-300 link-black text-xs text-black font-light">
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/news">ព័ត៌មានថ្មីៗ</Link>
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/real-estate">អចលនទ្រព្យ</Link>
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/leadership">ភាពជាអ្នកដឹកនាំ</Link>
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/finance">ហិរញ្ញវត្ថុ</Link>
-                <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/sales">កំពូលអ្នកលក់</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/news">ព័ត៌មានថ្មីៗ</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/real-estate">អចលនទ្រព្យ</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/leadership">ភាពជាអ្នកដឹកនាំ</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/finance">ហិរញ្ញវត្ថុ</Link>
+                <Link className={`mx-5 hover:border-b-2 duration-200 text-black ${router.asPath === '/articles' ? 'text-white' : "" } `} href="/sales">កំពូលអ្នកលក់</Link>
             </ul>
         :
             <ul className="hidden lg:flex items-center text-white duration-300 link-black text-xs font-light">
