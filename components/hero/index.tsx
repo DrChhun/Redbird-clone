@@ -1,6 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper";
@@ -28,7 +26,7 @@ function Hero () {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper h-[100vh]"
+                className="mySwiper h-[100vh] bg-white home-slider"
                 style={{padding: 0}}
             >
                 {popular.map((data) => (

@@ -9,25 +9,11 @@ import Heading from "../Heading"
 import NewsCard from "../NewsCard"
 import {contentData} from '../../data/contentData.json'
 
-const EstateCategory = () => {
+const EstateCategory = ({windowWidth}: any) => {
 
     const data = contentData.filter(get => get.type == "estate")
 
     const estate = data.splice(0, 4)
-
-    const [windowWidth, setInnerWidth] = useState<any>();
-
-    useEffect(() => {
-        let vw = window.innerWidth;
-        if (vw != windowWidth) {
-            setInnerWidth(vw);
-        } else {
-            setInnerWidth(windowWidth);
-        }
-    
-        document.documentElement.style.setProperty('--vh', `${vw}px`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">

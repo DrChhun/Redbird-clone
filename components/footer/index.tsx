@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 function Footer() {
     return (
         <>
@@ -9,31 +11,43 @@ function Footer() {
                     <div className="text-center md:text-left mb-8 md:mb-0">
                         <h1 className="text-xs md:text-lg font-bold">ស្វែងយល់អំពីពួកយើង</h1>
                         <p className="py-4 text-xs lg:text-base">អំពីពួកយើង</p>
-                        <p className="text-xs text:base">sam.businesscambodia@gmail.com</p>
+                        <a href="mailto: sam.businesscambodia@gmail.com" className="text-xs text:base">sam.businesscambodia@gmail.com</a>
                     </div>
                     <div className="text-center mb-8 md:mb-0">
                         <h1 className="text-xs font-bold md:text-lg mb-4">អត្ថបទផ្សេងៗ</h1>
                         <div className="flex justify-center">
                             <ul className="text-start mx-4 text-xs lg:text-base">
-                                <li>ព័ត៌មានថ្មីៗ</li>
-                                <li>ចាប់ផ្តើមអាជីវកម្ម</li>
-                                <li>អចលនទ្រព្យ</li>
-                                <li>ភាពជាអ្នកដឹកនាំ</li>
-                                <li>ហិរញ្ញវត្ថុ</li>
+                                <li>
+                                    <Link href="/news">ព័ត៌មានថ្មីៗ</Link>
+                                </li>
+                                <li>
+                                    <Link href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
+                                </li>
+                                <li>
+                                    <Link href="/real-estate">អចលនទ្រព្យ</Link>
+                                </li>
+                                <li>
+                                    <Link href="/leadership">ភាពជាអ្នកដឹកនាំ</Link>
+                                </li>
+                                <li>
+                                    <Link href="/finance">ហិរញ្ញវត្ថុ</Link>
+                                </li>
                             </ul>
                             <ul className="text-start mx-4 text-xs lg:text-base">
-                                <li>កំពូលអ្នកលក់</li>
-                                <li>របាយការណ៍</li>
+                                <li>
+                                    <Link href="/sales">កំពូលអ្នកលក់</Link>
+                                </li>
+                                {/* <li>របាយការណ៍</li>
                                 <li>អត្ថបទ</li>
                                 <li>មុខរបរបច្ចេកវិទ្យា</li>
-                                <li>ពិព័ណ៍</li>
+                                <li>ពិព័ណ៍</li> */}
                             </ul>
                         </div>
                     </div>
                     <div className="text-center md:text-right">
                         <h1 className="text-xs font-bold md:text-lg">ទំនាក់ទំនងពួកយើង</h1>
-                        <p className="text-xs md:text-base ont-light py-4">017 300 755/093 300 755</p>
-                        <p className="text-xs md:text-base font-light">Building 422 St. 271, Phum 1, Stung Mean Chey</p>
+                        <a href="tel: 023880880" className="text-xs md:text-base ont-light py-4">017 300 755/093 300 755</a><br />
+                        <a target="_blank" href="https://goo.gl/maps/VFp3DXYc82R1s2Kq6" className="text-xs md:text-base font-light">Building 422 St. 271, Phum 1, Stung Mean Chey</a>
                     </div>
                 </div>
                 <div className="text-center">

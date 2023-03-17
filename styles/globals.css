@@ -8,6 +8,61 @@
     background-color: black;
 }
 
-/* .swiper-wrapper {
-    padding: 2rem 0;
+.home-slider .swiper-pagination .swiper-pagination-bullet {
+    background-color: white;
+    width: 50px;
+    border-radius: 0;
+    height: 2px;
+}
+
+/* @media (max-width: 600px) {
+    .hamburger {
+        color: black;
+    }
+} */
+
+/* .swiper-pagination:nth-child(1) .swiper-pagination-bullet {
+    background-color: blue;
+} */
+
+/* @media (min-width: 600px) {
+    .home-slider .swiper-pagination .swiper-pagination-bullet {
+        background-color: white;
+        width: 50px;
+        border-radius: 0;
+        height: 2px;
+    }
+} */
+
+/* .sliderWrapper 
+    :global(.swiper-pagination-bullet) {
+      background: white;
+      width: 1rem;
+      height: 1rem;
+      border-radius: .5rem;
+      opacity: 1;
+  } */
+  
+  /* :global(.swiper-pagination-bullet-active) {
+    background-color: blue;
+    width: 5rem;
+    height: 1rem;
+    border-radius: .5rem;
+  } */
+
+
+/* .swiper .swiper-pagination:nth-last-child(1) span {
+    background-color: white !important;
+} */
+
+/* .swiper-pagination .swiper-pagination-bullet .feature-pagination:nth-child(-n + 3)  {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+} */
+
+/* .swiper-pagination .swiper-pagination-bullet .feature-pagination:nth-child(-n + 3)  {
+    background-color: white !important;
+    height: 50px !important;
+    width: 50px !important;
 } */

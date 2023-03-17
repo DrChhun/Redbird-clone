@@ -12,8 +12,22 @@ import SaleCategory from "@/components/category/SaleCategory"
 import FinanceCategory from "@/components/category/FinanceCategory"
 import RecentNews from "@/components/category/RecentNews"
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 function Home() {
+
+  const [windowWidth, setInnerWidth] = useState<any>();
+
+    useEffect(() => {
+        setInnerWidth(window.innerWidth)
+        const handleWidth = () => {
+            setInnerWidth(window.innerWidth)
+        }
+          window.addEventListener('resize', handleWidth)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    console.log('width:', windowWidth)
     
     return (
         <>
@@ -36,22 +50,22 @@ function Home() {
             <RecentNews />
 
             {/* category New */}
-            <NewCategory />
+            <NewCategory windowWidth={windowWidth}/>
 
             {/* category Business */}
-            <BusinessCategory />
+            <BusinessCategory windowWidth={windowWidth} />
 
             {/* category Real-Estate */}
-            <EstateCategory />
+            <EstateCategory windowWidth={windowWidth}/>
 
             {/* category by content */}
-            <LeadershipCategory />
+            <LeadershipCategory windowWidth={windowWidth}/>
 
             {/* category by content */}
-            <FinanceCategory />
+            <FinanceCategory windowWidth={windowWidth}/>
 
             {/* category by content */}
-            <SaleCategory />
+            <SaleCategory windowWidth={windowWidth}/>
 
         </>
     )

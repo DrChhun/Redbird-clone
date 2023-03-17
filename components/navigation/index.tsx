@@ -35,14 +35,14 @@ function Navigation() {
     console.log(router.asPath);
 
     return (
-        <div className={`fixed px-6 py-4 z-[9] w-full flex justify-between items-center duration-300 ${router.asPath = "/articles" ? 'text-white' : ""} ${router.asPath.startsWith('/articles') ? 'bg-white shadow-md' : ""} ${!visible ? 'top-[-10%]': "top-0 bg-white shadow-sm" } ${prevScrollPos == 0 ? '!bg-transparent': ""}`}>
+        <div className={`fixed px-6 py-4 z-[9] w-full flex justify-between items-center duration-300 ${router.asPath = "/articles" ? 'text-white' : ""} ${router.asPath.startsWith('/articles') ? 'bg-white shadow-md' : ""} ${!visible ? 'top-[-15%]': "top-0 bg-white shadow-sm" } ${prevScrollPos == 0 ? '!bg-transparent': ""}`}>
             
             <Link href="/">
                 <Image fill className="!relative !w-20 !h-12" src="https://business-cambodia.com/BC.png" alt="" />
             </Link>
             
         {router.asPath.startsWith('/articles') ? 
-            <ul className="hidden lg:flex items-center text-white duration-300 link-black text-xs font-light">
+            <ul className="hidden lg:flex items-center text-white duration-300 link-black text-xs text-black font-light">
                 <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/news">ព័ត៌មានថ្មីៗ</Link>
                 <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/business">ចាប់ផ្តើមអាជីវកម្ម</Link>
                 <Link className="mx-5 hover:border-b-2 duration-200 text-black" href="/real-estate">អចលនទ្រព្យ</Link>
