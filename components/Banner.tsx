@@ -37,14 +37,18 @@ const Banner = ({image, children, colors, weight, size}: Props) => {
     return (
         <>
             <div className="relative">
-                <Image 
-                    loading="lazy"
-                    fill 
-                    className="!relative !h-[300px] w-full object-cover brightness-50" 
-                    src={image} alt="" 
-                    placeholder="blur" 
-                    blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
-                />
+                <div className="!relative !h-[300px] w-full object-cover brightness-50">
+                    <Image 
+                        className="object-cover"
+                        fill
+                        src={image} 
+                        alt="" 
+                        placeholder="blur" 
+                        blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
+                        priority
+                    />
+                </div>
+    
                 <div className="absolute top-1/2 px-10">
                     <h1 className={heading({colors, weight, size})}>{children}</h1>
                 </div>

@@ -32,15 +32,18 @@ function Hero () {
             >
                 {popular.map((data) => (
                     <SwiperSlide key={data.title} className="aspect-video">
-                        <Image 
-                            fill
-                            loading="lazy"
-                            className="relative object-cover h-full w-full brightness-[.30]" 
-                            src={data.image} 
-                            alt="" 
-                            placeholder="blur"
-                            blurDataURL={data.image}
-                        />
+                        <div className="relative object-cover h-full w-full brightness-[.30]" >
+                            <Image 
+                                className="object-cover"
+                                fill
+                                src={data.image} 
+                                alt="" 
+                                placeholder="blur"
+                                blurDataURL={data.image}
+                                priority
+                            />
+                        </div>
+            
                         <div className="absolute w-full md:w-4/5 lg:w-2/4 top-[30%] lg:top-1/4 py-0 px-10 sm:p-10 md:pl-10">
                             <Title size="xxxl" lineHeight="normal" colors="white">{data.title}</Title>
                             <div className="my-5"><PostDetail author={data.author.name} category={data.category} date={data.date} colors="white" /></div>
