@@ -46,7 +46,8 @@ function Footer() {
                     </div>
                     <div className="text-center md:text-right">
                         <h1 className="text-xs font-bold md:text-lg">ទំនាក់ទំនងពួកយើង</h1>
-                        <a href="tel: 023880880" className="text-xs md:text-base ont-light py-4">017 300 755/093 300 755</a><br />
+                        <a href="tel: 017300755" className="text-xs md:text-base ont-light py-4">017 300 755 / </a>
+                        <a href="tel: 093300755">093 300 755</a> <br />
                         <a target="_blank" href="https://goo.gl/maps/VFp3DXYc82R1s2Kq6" className="text-xs md:text-base font-light">Building 422 St. 271, Phum 1, Stung Mean Chey</a>
                     </div>
                 </div>

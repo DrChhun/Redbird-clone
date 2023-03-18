@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority"
 import Link from "next/link";
 import React, { ButtonHTMLAttributes } from "react"
 
-const button = cva("text-xs md:text-base lg:text-lg py-2 px-10 font-medium md:mt-4 duration-300 border-2", {
+const button = cva("text-xs md:text-base lg:text-lg py-2 px-4 sm:px-10 font-medium md:mt-4 duration-300 border-2", {
     variants: {
         styles: {
             fill: 'bg-white border-white shadow-md text-black hover:bg-transparent hover:border-2 hover:border-white hover:text-white',

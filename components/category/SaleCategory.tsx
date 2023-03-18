@@ -55,7 +55,7 @@ const SaleCategory = ({windowWidth}: any) => {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
-                style={{padding: "2rem 0"}}
+                style={{padding: "2rem 1rem"}}
               >
                 {sales.map((x) => 
                      (
