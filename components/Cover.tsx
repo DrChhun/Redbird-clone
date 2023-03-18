@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from "next/image"
 import Link from "next/link"
 import Heading from "./Heading"
 import Title from "./Title"
@@ -16,7 +17,15 @@ interface Props {
 const Cover = ({img, children, link, heading, fontSize, underlineColor}: Props) => {
     return (
         <div className="relative group h-full w-full overflow-hidden">
-            <img className="relative row-span-3 h-full w-full object-cover group-hover:scale-105 duration-300 brightness-[.30]" src={img} alt="" />
+            <Image 
+                height={1080} 
+                width={1920} 
+                className="relative row-span-3 h-full w-full object-cover group-hover:scale-105 duration-300 brightness-[.30]" 
+                src={img} 
+                alt="coverImage" 
+                placeholder="blur"
+                blurDataURL={`/_next/image?url=${img}&w=16&q=1`}
+            />
             <div className="absolute top-1/2 w-3/4 translate-y-[-50%] p-8">
                 <Heading underlineColor={underlineColor} colors="white" size="base" weight="bold" underline>{heading}</Heading>
                  <Link href={link} className="relative top-0d hover:underline decoration-white" ><Title colors="white" size={fontSize} weight="medium">{children}</Title></Link>

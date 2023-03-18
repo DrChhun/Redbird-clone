@@ -38,14 +38,13 @@ const Banner = ({image, children, colors, weight, size}: Props) => {
         <>
             <div className="relative">
                 <div className="!relative !h-[300px] w-full object-cover brightness-50">
-                    <Image 
+                    <Image
                         className="object-cover"
                         fill
                         src={image} 
                         alt="" 
                         placeholder="blur" 
                         blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
-                        priority
                     />
                 </div>
     

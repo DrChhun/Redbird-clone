@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Navigation/>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       <Footer />
     </div>
   )

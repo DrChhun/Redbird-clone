@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rub from '../public/B-1.jpeg'
+import rub from '../public/B-1.png'
 
 const ImagePage = () => {
     return (
@@ -11,6 +11,7 @@ const ImagePage = () => {
                 placeholder="blur"
                 className="!relative !h-64 !w-auto"
             />
+            <img src="/B-1.png" alt="" />
         </>
     )
 }

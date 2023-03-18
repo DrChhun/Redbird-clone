@@ -39,8 +39,7 @@ function Hero () {
                                 src={data.image} 
                                 alt="" 
                                 placeholder="blur"
-                                blurDataURL={data.image}
-                                priority
+                                blurDataURL={`/_next/image?url=${data.image}&w=16&q=1`}
                             />
                         </div>
             
