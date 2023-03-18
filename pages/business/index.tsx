@@ -19,7 +19,7 @@ const Business = () => {
 
     return (
         <>
-            <Banner colors="white" size="xl" weight="bold" image="/B-1.jpeg">
+            <Banner colors="white" size="xl" weight="bold" image="/B-1.png">
                 នាំមនុស្សស្រមៃអោយធំ ចាប់ផ្តើមអោយតូច ពង្រីកអោយធំ
             </Banner>
 
