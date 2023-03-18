@@ -19,7 +19,6 @@ const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
     <div className="flex newscard h-[380px] justify-between flex-col bg-white shadow-xl rounded-xl hover:shadow-lg duration-300 hover:cursor-pointer overflow-hidden group h-full">
       <div>
         <Image
-          loader={loader}
           className="rounded-sm group-hover:scale-105 duration-300 w-full aspect-w-16 aspect-h-9 p-0"
           src={image}
           alt="tech-bodia"
