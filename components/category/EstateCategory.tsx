@@ -54,7 +54,7 @@ const EstateCategory = ({windowWidth}: any) => {
                     },
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper mobile"
                 style={{padding: "2rem 1rem"}}
               >
                 {estate.map((x) => 

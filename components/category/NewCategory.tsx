@@ -54,7 +54,7 @@ const NewCategory = ({windowWidth}: any) => {
                     },
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper mobile"
                 style={{padding: "2rem 1rem"}}
               >
                 {newsData.map((x) => 
