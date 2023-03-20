@@ -41,8 +41,8 @@ const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
           className="rounded-sm group-hover:scale-105 duration-300 w-full aspect-w-16 aspect-h-9 p-0"
           src={image}
           alt="tech-bodia"
-          width={300}
-          height={196}
+          width={249}
+          height={131}
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
         />

@@ -15,7 +15,7 @@ const shimmer = (w: number, h: number) => `
   </defs>
   <rect width="${w}" height="${h}" fill="#333" />
   <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur=".5 s" repeatCount="indefinite"  />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur=".5s" repeatCount="indefinite"  />
 </svg>`
 
 const toBase64 = (str: string) =>
@@ -38,7 +38,7 @@ const ArticleDetail = () => {
                             <Image
                                 width={1000}
                                 height={500}
-                                className="py-12 !relative object-cover" 
+                                className="my-12 !relative object-cover" 
                                 src={data.image} 
                                 alt=""
                                 placeholder="blur"
