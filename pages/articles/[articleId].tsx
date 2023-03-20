@@ -37,7 +37,7 @@ const ArticleDetail = () => {
                         <div className="md:w-3/4 lg:w-3/5">
                             <Image
                                 width={1000}
-                                height={500}
+                                height={525}
                                 className="my-12 !relative object-cover" 
                                 src={data.image} 
                                 alt=""
