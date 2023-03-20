@@ -4,6 +4,25 @@ import Link from "next/link"
 import Heading from "./Heading"
 import Title from "./Title"
 
+const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#333" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#333" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#333" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur=".5s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str: string) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str)
+
 /* eslint-disable @next/next/no-img-element */
 interface Props {
     img: string
@@ -24,7 +43,7 @@ const Cover = ({img, children, link, heading, fontSize, underlineColor}: Props) 
                 src={img} 
                 alt="coverImage" 
                 placeholder="blur"
-                blurDataURL={`/_next/image?url=${img}&w=16&q=1`}
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             />
             <div className="absolute top-1/2 w-3/4 translate-y-[-50%] p-8">
                 <Heading underlineColor={underlineColor} colors="white" size="base" weight="bold" underline>{heading}</Heading>
