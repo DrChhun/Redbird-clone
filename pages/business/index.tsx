@@ -35,7 +35,7 @@ const Business = () => {
                             <>
                                 <Link href={`/articles/${data.id}`}>
                                     <NewsCard id={0} image={data.image} title={data.title} tag={data.category} profile={{
-                                        image:"/B-1.jpeg",
+                                        image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
                                         name: "fortnite",
                                         date: "March 23 2023",
                                         view: 999

@@ -19,11 +19,12 @@ function Home() {
   const [windowWidth, setInnerWidth] = useState<any>();
 
     useEffect(() => {
-        setInnerWidth(window.innerWidth)
+        setInnerWidth(window.innerWidth) //set value to widowWidth state
+
         const handleWidth = () => {
             setInnerWidth(window.innerWidth)
         }
-          window.addEventListener('resize', handleWidth)
+        window.addEventListener('resize', handleWidth)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
