@@ -7,13 +7,13 @@ import { Pagination } from "swiper";
 import Button from "../Button";
 import Heading from "../Heading"
 import NewsCard from "../NewsCard"
-import {contentData} from '../../data/contentData.json'
+import {data} from '../../data/contentData.json'
 
 const BusinessCategory = ({windowWidth}: any) => {
 
-    const data = contentData.filter(get => get.type == "business")
+    const newData = data.filter(get => get.type == "business")
 
-    const business = data.splice(0, 4)
+    const business = newData.splice(0, 4)
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">

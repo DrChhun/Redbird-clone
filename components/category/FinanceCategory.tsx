@@ -7,11 +7,11 @@ import { Pagination } from "swiper";
 import Button from "../Button";
 import Heading from "../Heading"
 import NewsCard from "../NewsCard"
-import {contentData} from '../../data/contentData.json'
+import {data} from '../../data/contentData.json'
 
 const FinanceCategory = ({windowWidth}: any) => {
 
-    const data = contentData.filter(get => get.type == "finance")
+    const newData = data.filter(get => get.type == "finance")
 
     const finance = data.splice(0, 4)
     

@@ -5,7 +5,7 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import Title from "@/components/Title";
 import PostDetail from "@/components/PostDetail";
 import Button from "@/components/Button";
-import {contentData} from '../../data/contentData.json'
+import {data} from '../../data/contentData.json'
 import Image from "next/image";
 
 const shimmer = (w: number, h: number) => `
@@ -19,7 +19,7 @@ const shimmer = (w: number, h: number) => `
   </defs>
   <rect width="${w}" height="${h}" fill="#e0e0e0" />
   <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur=".5s" repeatCount="indefinite"  />
 </svg>`
 
 const toBase64 = (str: string) =>
@@ -29,7 +29,7 @@ const toBase64 = (str: string) =>
 
 function Hero () {
 
-    const popular = contentData.filter(get => get.type == "popular")
+    const popular = data.filter(get => get.type == "popular")
 
     return (
         <>

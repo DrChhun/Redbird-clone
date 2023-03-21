@@ -1,21 +1,26 @@
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
-import {contentData} from '../../data/contentData.json'
 import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
+import { GetStaticProps } from "next"
+import { Article } from "@/commons/interface"
 
-function Sales() {
+interface Props {
+    data: Article[]
+}
 
-    const data = contentData.filter(get => get.type == "sales")
-    const [req, setReq] = useState<number>(10)
-    const limit = data.splice(0, req);
+function Sales({data}: Props) {
 
-    const getMore = () => {
-        setTimeout(() => {
-            setReq(req + 10)
-        }, 500);
-    }
+    const newData = data.filter(get => get.type == "sales")
+    // const [req, setReq] = useState<number>(10)
+    // const limit = data.splice(0, req);
+
+    // const getMore = () => {
+    //     setTimeout(() => {
+    //         setReq(req + 10)
+    //     }, 500);
+    // }
 
     return (
         <>
@@ -23,14 +28,14 @@ function Sales() {
                 នាំមនុស្សគិតពីយុទ្ធសាស្រ្តលក់ ក្លាយជាកំពូលអ្នកលក់ឆ្នើម
             </Banner>
 
-            <InfiniteScroll
+            {/* <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            >
+            > */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {limit.map((data) => {
+                    {newData.map((data) => {
                         return (
                             <>
                                 <Link href={`/articles/${data.id}`}>
@@ -45,9 +50,22 @@ function Sales() {
                         )
                     })}
                 </div>
-            </InfiniteScroll>
+            {/* </InfiniteScroll> */}
         </>
     )
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    
+    const res = await fetch('http://localhost:3000/api/article')
+    const jsonData = await res.json()
+    console.log(jsonData)
+    
+    return {
+      props: {
+        data: jsonData.data
+      }, 
+    }
 }
 
 export default Sales

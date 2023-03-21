@@ -1,9 +1,14 @@
+import { Article } from "@/commons/interface"
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
+import { GetStaticProps } from "next"
 import Link from "next/link"
-import {contentData} from '../../data/contentData.json'
 
-const Artical = () => {
+interface Props {
+    data: Article[]
+}
+
+const Artical = ({data}: Props) => {
 
     return (
         <>
@@ -12,7 +17,7 @@ const Artical = () => {
             </Banner>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                {contentData.map((data) => {
+                {data.map((data) => {
                     return (
                         <>
                             <Link href={`/articles/${data.id}`}>
@@ -29,6 +34,19 @@ const Artical = () => {
             </div>
         </>
     )
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    
+    const res = await fetch('http://localhost:3000/api/article')
+    const jsonData = await res.json()
+    console.log(jsonData)
+    
+    return {
+      props: {
+        data: jsonData.data
+      }, 
+    }
 }
 
 export default Artical

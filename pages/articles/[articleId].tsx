@@ -1,8 +1,14 @@
+import { Article } from "@/commons/interface"
 import PostDetail from "@/components/PostDetail"
 import Title from "@/components/Title"
+import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import {contentData} from '../../data/contentData.json'
+import {data} from '../../data/contentData.json'
+
+interface Props {
+    data: Article[]
+}
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -23,11 +29,11 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
 
-const ArticleDetail = () => {
-    const router = useRouter()
-    const articleId = router.query.articleId
-    const data = contentData.filter(get => get.id == articleId);
-    console.log(data)
+const ArticleDetail = ({data}: Props) => {
+    // const router = useRouter()
+    // const articleId = router.query.articleId
+    // const newData = data.filter(get => get.id == articleId);
+
     return (
         <div className="py-12 py-24 lg:py-24 px-4 lg:px-36">
             {data.map((data) => {
@@ -56,3 +62,35 @@ const ArticleDetail = () => {
 }
 
 export default ArticleDetail
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch('http://localhost:3000/api/article')
+  const data = await res.json()
+
+  const paths = data.data.map((post: { id: any }) => {
+    return {
+      params: {
+        articleId: `${post.id}`
+      }
+    }
+  })
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
+  
+  const {params} = context
+  const res = await fetch(`http://localhost:3000/api/article/${params?.articleId}`)
+  const jsonData = await res.json()
+  console.log('data here', jsonData)
+  
+  return {
+    props: {
+      data: jsonData
+    }, 
+  }
+}
