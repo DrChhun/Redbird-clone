@@ -14,7 +14,7 @@ import RecentNews from "@/components/category/RecentNews"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Article } from "@/commons/interface";
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 
 interface Props {
     data: Article[]
@@ -89,16 +89,15 @@ const Home:React.FC<Props> = ({data}) => {
     )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    
-    const res = await fetch('http://localhost:3000/api/article')
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+    const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article`)
     const data = await res.json()
-    console.log(data, "99")
     
     return {
       props: {
-        data: data.data
+        data: data.data,
       }, 
+      
     }
 }
 

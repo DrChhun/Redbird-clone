@@ -1,7 +1,7 @@
 import { Article } from "@/commons/interface"
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
-import { GetStaticProps } from "next"
+import { GetServerSideProps, GetStaticProps } from "next"
 import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
@@ -54,9 +54,9 @@ const Artical = ({data}: Props) => {
     )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
     
-    const res = await fetch('http://localhost:3000/api/article')
+    const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article')
     const jsonData = await res.json()
     
     return {

@@ -1,7 +1,7 @@
 import { Article } from "@/commons/interface"
 import PostDetail from "@/components/PostDetail"
 import Title from "@/components/Title"
-import { GetStaticPaths, GetStaticProps } from "next"
+import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
@@ -60,28 +60,10 @@ const ArticleDetail = ({data}: Props) => {
     )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch('http://localhost:3000/api/article')
-  const data = await res.json()
-
-  const paths = data.data.map((post: { id: any }) => {
-    return {
-      params: {
-        articleId: `${post.id}`
-      }
-    }
-  })
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
   
   const {params} = context
-  const res = await fetch(`http://localhost:3000/api/article/${params?.articleId}`)
+  const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article/${params?.articleId}`)
   const jsonData = await res.json()
   
   return {

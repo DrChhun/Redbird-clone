@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { Article } from '@/commons/interface';
 import type { NextApiRequest, NextApiResponse } from 'next'
-import data from './../../../data/contentData.json';
+import data from '../../../data/contentData.json';
 
 export default function handler(
     req: NextApiRequest,
