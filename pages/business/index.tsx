@@ -13,14 +13,15 @@ interface Props {
 const Business = ({data}: Props) => {
 
     const newData = data.filter(article => article.type == "business")
-    // const [req, setReq] = useState<number>(10)
-    // const limit = newData.splice(0, req);
 
-    // const getMore = () => {
-    //     setTimeout(() => {
-    //         setReq(req + 10)
-    //     }, 500);
-    // }
+    const [req, setReq] = useState<number>(10)
+    const limit = newData.splice(0, req);
+
+    const getMore = () => {
+        setTimeout(() => {
+            setReq(req + 10)
+        }, 500);
+    }
 
     return (
         <>
@@ -28,14 +29,14 @@ const Business = ({data}: Props) => {
                 នាំមនុស្សស្រមៃអោយធំ ចាប់ផ្តើមអោយតូច ពង្រីកអោយធំ
             </Banner>
 
-            {/* <InfiniteScroll
+            <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            > */}
+            >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {/* {limit.map((data) => {
+                    {limit.map((data) => {
                         return (
                             <>
                                 <Link href={`/articles/${data.id}`}>
@@ -48,8 +49,8 @@ const Business = ({data}: Props) => {
                                 </Link>
                             </>
                         )
-                    })} */}
-                    {newData.map(article => {
+                    })}
+                    {/* {newData.map(article => {
                         return (
                             <>
                                 <Link href={`/articles/${article.id}`}>
@@ -62,9 +63,9 @@ const Business = ({data}: Props) => {
                                 </Link>
                             </>
                         )
-                    })}
+                    })} */}
                 </div>
-            {/* </InfiniteScroll> */}
+            </InfiniteScroll>
         </>
     )
 }
@@ -81,5 +82,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }
 }
   
-
 export default Business

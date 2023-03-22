@@ -13,14 +13,14 @@ interface Props {
 function Leadership({data}: Props) {
 
     const newData = data.filter(get => get.type == "leadership")
-    // const [req, setReq] = useState<number>(10)
-    // const limit = data.splice(0, req);
+    const [req, setReq] = useState<number>(10)
+    const limit = newData.splice(0, req);
 
-    // const getMore = () => {
-    //     setTimeout(() => {
-    //         setReq(req + 10)
-    //     }, 500);
-    // }
+    const getMore = () => {
+        setTimeout(() => {
+            setReq(req + 10)
+        }, 500);
+    }
 
     return (
         <>
@@ -28,14 +28,14 @@ function Leadership({data}: Props) {
                 បំផុសគំនិតក្នុងការដឹកនាំ នាំមនុស្សធម្មតា ក្លាយជា CEO ឆ្នើម
             </Banner>
 
-            {/* <InfiniteScroll
+            <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            > */}
+            >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {newData.map((data) => {
+                    {limit.map((data) => {
                         return (
                             <>
                                 <Link href={`/articles/${data.id}`}>
@@ -50,7 +50,7 @@ function Leadership({data}: Props) {
                         )
                     })}
                 </div>
-            {/* </InfiniteScroll> */}
+            </InfiniteScroll>
         </>
     )
 }

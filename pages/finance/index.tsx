@@ -14,14 +14,14 @@ interface Props {
 function Finance({data}: Props) {
 
     const newData = data.filter(article => article.type == "finance")
-    // const [req, setReq] = useState<number>(10)
-    // const limit = newData.splice(0, req);
+    const [req, setReq] = useState<number>(10)
+    const limit = newData.splice(0, req);
 
-    // const getMore = () => {
-    //     setTimeout(() => {
-    //         setReq(req + 10)
-    //     }, 500);
-    // }
+    const getMore = () => {
+        setTimeout(() => {
+            setReq(req + 10)
+        }, 500);
+    }
 
     return (
         <>
@@ -29,14 +29,14 @@ function Finance({data}: Props) {
                 នាំប្រជាជនខ្មែរ យល់ពីចំណេះដឹងហិរញ្ញវត្ថុ តាមឱ្យទាន់របត់បច្ចេកវិទ្យា
             </Banner>
             
-            {/* <InfiniteScroll
+            <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            > */}
+            >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {newData.map((article) => {
+                    {limit.map((article) => {
                         return (
                             <>
                                 <Link href={`/articles/${article.id}`}>
@@ -51,7 +51,7 @@ function Finance({data}: Props) {
                         )
                     })}
                 </div>
-            {/* </InfiniteScroll> */}
+            </InfiniteScroll>
         </>
     )
 }

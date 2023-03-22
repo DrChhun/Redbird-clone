@@ -15,14 +15,14 @@ interface Props {
 function News({data}: Props) {
 
     const newData = data.filter(get => get.type == "new")
-    // const [req, setReq] = useState<number>(10)
-    // const limit = data.splice(0, req);
+    const [req, setReq] = useState<number>(10)
+    const limit = newData.splice(0, req);
 
-    // const getMore = () => {
-    //     setTimeout(() => {
-    //         setReq(req + 10)
-    //     }, 500);
-    // }
+    const getMore = () => {
+        setTimeout(() => {
+            setReq(req + 10)
+        }, 500);
+    }
 
     return (
         <>
@@ -30,14 +30,14 @@ function News({data}: Props) {
                 បំផុសសកម្មភាពអាជីវកម្មថ្មីៗទាំងនៅក្នុងស្រុក និងក្រៅស្រុក
             </Banner>
 
-            {/* <InfiniteScroll
+            <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            > */}
+            >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {newData.map((article) => {
+                    {limit.map((article) => {
                         return (
                             <>
                                 <Link href={`/articles/${article.id}`}>
@@ -52,7 +52,7 @@ function News({data}: Props) {
                         )
                     })}
                 </div>
-            {/* </InfiniteScroll> */}
+            </InfiniteScroll>
         </>
     )
 }

@@ -36,7 +36,7 @@ interface Props {
 function Hero ({api}: Props) {
 
     // const popular = data.filter((get: { type: string; }) => get.type == "popular")
-    const popular = api?.filter((get: { type: string; }) => get.type == "popular")
+    const popular = api?.filter((get) => get.type == "popular")
 
     return (
         <>
@@ -56,7 +56,7 @@ function Hero ({api}: Props) {
                 className="mySwiper h-[100vh] bg-white home-slider"
                 style={{padding: 0}}
             >
-                {popular?.map((data: any) => (
+                {popular?.map((data) => (
                     <SwiperSlide key={data.title} className="aspect-video">
                         <div className="relative object-cover h-full w-full brightness-[.30]" >
                             <Image 
