@@ -20,10 +20,11 @@ interface Props {
     data: Article[]
 }
 
-function Home({data}: any) {
+const Home:React.FC<Props> = ({data}) => {
 
     const [windowWidth, setInnerWidth] = useState<any>();
-    const [api, setApi] = useState<any | null>(data)
+    const [api, setApi] = useState<Article[]>(data)
+    
 
     // const fetchData = async () => {
     //     const res = await fetch('http://localhost:3000/api/article')
@@ -41,6 +42,7 @@ function Home({data}: any) {
         }
         window.addEventListener('resize', handleWidth)
         // eslint-disable-next-line react-hooks/exhaustive-deps
+
     }, [])
 
     // console.log('width:', windowWidth)
@@ -90,11 +92,12 @@ function Home({data}: any) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
     
     const res = await fetch('http://localhost:3000/api/article')
-    const jsonData = await res.json()
+    const data = await res.json()
+    console.log(data, "99")
     
     return {
       props: {
-        data: jsonData.data
+        data: data.data
       }, 
     }
 }

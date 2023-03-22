@@ -7,15 +7,19 @@ import { Pagination } from "swiper";
 import Button from "../Button";
 import Heading from "../Heading"
 import NewsCard from "../NewsCard"
-import {data} from '../../data/contentData.json'
+import { Article } from "@/commons/interface";
+interface Props {
+    windowWidth: number
+    api?: Article[]
+}
 
-const SaleCategory = ({windowWidth, api}: any) => {
+const SaleCategory = ({windowWidth, api}: Props) => {
 
     // const newData = data.filter(get => get.type == "sales")
 
     // const sales = newData.splice(0, 4)
-    const newData = api.filter((get: { type: string; }) => get.type == "sales")
-    const sales = newData.splice(0, 4)
+    const newData = api?.filter((get: { type: string; }) => get.type == "sales")
+    const sales = newData?.splice(0, 4)
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">
@@ -27,7 +31,7 @@ const SaleCategory = ({windowWidth, api}: any) => {
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
-                        {sales.map((x: any) => (
+                        {sales?.map((x: any) => (
                             <Link key={x.title} href={`/articles/${x.id}`}>
                                 <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                 image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -59,7 +63,7 @@ const SaleCategory = ({windowWidth, api}: any) => {
                 className="mySwiper mobile"
                 style={{padding: "2rem 1rem"}}
               >
-                {sales.map((x: any) => 
+                {sales?.map((x: any) => 
                      (
                         <SwiperSlide key={x.title}>
                             <Link href={`articles/${x.id}`}>
