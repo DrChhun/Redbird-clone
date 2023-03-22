@@ -26,7 +26,9 @@ function Home() {
 
     const fetchData = async () => {
         const res = await fetch('http://localhost:3000/api/article')
-        const data = res.json()
+        const get = await res.json()
+        const data = get
+        setApi(data)
         console.log(data, "TTgg")
     }
 
@@ -65,7 +67,7 @@ function Home() {
             <RecentNews />
 
             {/* category New */}
-            <NewCategory windowWidth={windowWidth} />
+            <NewCategory windowWidth={windowWidth} api={api}/>
 
             {/* category Business */}
             <BusinessCategory windowWidth={windowWidth} />

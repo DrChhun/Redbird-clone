@@ -74,7 +74,7 @@ const BusinessCategory = ({windowWidth}: any) => {
                 
               </Swiper>
                 }
-            </div>
+        </div>
     )
 }
 

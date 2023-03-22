@@ -9,11 +9,14 @@ import Heading from "../Heading"
 import NewsCard from "../NewsCard"
 import {data} from '../../data/contentData.json'
 
-const NewCategory = ({windowWidth}: any) => {
+const NewCategory = ({windowWidth, api}: any) => {
 
     const newData = data.filter(get => get.type == "new")
     
     const newsData = newData.splice(0, 4);
+
+    const fetch = api?.data.filter((man: { type: string; }) => man.type == "new")
+    console.log(fetch)
 
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">
