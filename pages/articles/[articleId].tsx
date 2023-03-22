@@ -60,8 +60,6 @@ const ArticleDetail = ({data}: Props) => {
     )
 }
 
-export default ArticleDetail
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch('http://localhost:3000/api/article')
   const data = await res.json()
@@ -92,3 +90,5 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
     }, 
   }
 }
+
+export default ArticleDetail

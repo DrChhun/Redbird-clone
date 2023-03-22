@@ -20,7 +20,7 @@ const Business = ({data}: Props) => {
     const getMore = () => {
         setTimeout(() => {
             setReq(req + 10)
-        }, 500);
+        }, 300);
     }
 
     return (
@@ -82,4 +82,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }
 }
   
+
 export default Business

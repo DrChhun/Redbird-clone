@@ -12,14 +12,14 @@ interface Props {
 
 const Artical = ({data}: Props) => {
 
-    const [req, setReq] = useState<number>(10)
-    const limit = data.splice(0, req);
+    // const [req, setReq] = useState<number>(10)
+    // const limit = data.splice(0, req);
 
-    const getMore = () => {
-        setTimeout(() => {
-            setReq(req + 10)
-        }, 500);
-    }
+    // const getMore = () => {
+    //     setTimeout(() => {
+    //         setReq(req + 10)
+    //     }, 500);
+    // }
 
     return (
         <>
@@ -27,14 +27,14 @@ const Artical = ({data}: Props) => {
                 អត្ថបទទាំងអស់
             </Banner>
 
-            <InfiniteScroll
+            {/* <InfiniteScroll
                 dataLength={limit.length}
                 next={getMore}
                 hasMore={true}
                 loader={<p className="hidden">loading...</p>}
-            >
+            > */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {limit.map((data) => {
+                    {data.map((data) => {
                         return (
                             <>
                                 <Link href={`/articles/${data.id}`}>
@@ -49,7 +49,7 @@ const Artical = ({data}: Props) => {
                         )
                     })}
                 </div>
-            </InfiniteScroll>
+            {/* </InfiniteScroll> */}
         </>
     )
 }
