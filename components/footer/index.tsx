@@ -1,10 +1,11 @@
+import Image from "next/image"
 import Link from "next/link"
 
 function Footer() {
     return (
         <>
             <div className="relative top-1 mt-12">
-                <img src="https://business-cambodia.com/footer.png" alt="" />
+                <Image fill src="https://business-cambodia.com/footer.png" alt="" />
             </div>
             <div className="py-12 px-10 bg-[#ed1c24] text-white">
                 <div className="md:grid md:grid-cols-3">
