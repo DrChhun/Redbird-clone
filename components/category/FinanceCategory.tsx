@@ -13,7 +13,7 @@ const FinanceCategory = ({windowWidth}: any) => {
 
     const newData = data.filter(get => get.type == "finance")
 
-    const finance = data.splice(0, 4)
+    const finance = newData.splice(0, 4)
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">

@@ -4,7 +4,6 @@ import Title from "@/components/Title"
 import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import {data} from '../../data/contentData.json'
 
 interface Props {
     data: Article[]
@@ -86,11 +85,10 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const {params} = context
   const res = await fetch(`http://localhost:3000/api/article/${params?.articleId}`)
   const jsonData = await res.json()
-  console.log('data here', jsonData)
   
   return {
     props: {
-      data: jsonData
+      data: jsonData.data
     }, 
   }
 }

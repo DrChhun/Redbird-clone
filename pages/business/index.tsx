@@ -73,7 +73,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     
     const res = await fetch('http://localhost:3000/api/article')
     const jsonData = await res.json()
-    console.log(jsonData)
     
     return {
       props: {

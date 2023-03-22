@@ -13,7 +13,7 @@ const LeadershipCategory = ({windowWidth}: any) => {
 
     const newData = data.filter(get => get.type == "leadership")
 
-    const leadership = data.splice(0, 4)
+    const leadership = newData.splice(0, 4)
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">

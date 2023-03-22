@@ -13,23 +13,37 @@ import FinanceCategory from "@/components/category/FinanceCategory"
 import RecentNews from "@/components/category/RecentNews"
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Article } from "@/commons/interface";
+
+interface Props {
+    data: Article[]
+}
 
 function Home() {
 
-  const [windowWidth, setInnerWidth] = useState<any>();
+    const [windowWidth, setInnerWidth] = useState<any>();
+    const [api, setApi] = useState<Props | null>()
+
+    const fetchData = async () => {
+        const res = await fetch('http://localhost:3000/api/article')
+        const data = res.json()
+        console.log(data, "TTgg")
+    }
 
     useEffect(() => {
         setInnerWidth(window.innerWidth) //set value to widowWidth state
+
+        fetchData()
 
         const handleWidth = () => {
             setInnerWidth(window.innerWidth)
         }
         window.addEventListener('resize', handleWidth)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     console.log('width:', windowWidth)
-    
+
     return (
         <>
             {/* navbar */}
@@ -51,22 +65,22 @@ function Home() {
             <RecentNews />
 
             {/* category New */}
-            <NewCategory windowWidth={windowWidth}/>
+            <NewCategory windowWidth={windowWidth} />
 
             {/* category Business */}
             <BusinessCategory windowWidth={windowWidth} />
 
             {/* category Real-Estate */}
-            <EstateCategory windowWidth={windowWidth}/>
+            <EstateCategory windowWidth={windowWidth} />
 
             {/* category by content */}
-            <LeadershipCategory windowWidth={windowWidth}/>
+            <LeadershipCategory windowWidth={windowWidth} />
 
             {/* category by content */}
-            <FinanceCategory windowWidth={windowWidth}/>
+            <FinanceCategory windowWidth={windowWidth} />
 
             {/* category by content */}
-            <SaleCategory windowWidth={windowWidth}/>
+            <SaleCategory windowWidth={windowWidth} />
 
         </>
     )

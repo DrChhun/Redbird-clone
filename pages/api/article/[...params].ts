@@ -10,5 +10,9 @@ export default function handler(
     const params = req.query.params
     const detail = data.data.filter(article => article.id == params)
 
-    res.status(200).json(detail)
+    res.status(200).json(
+      {
+        data: detail
+      }
+    )
 }

@@ -7,6 +7,8 @@ import PostDetail from "@/components/PostDetail";
 import Button from "@/components/Button";
 import {data} from '../../data/contentData.json'
 import Image from "next/image";
+import { Article } from "@/commons/interface";
+import { GetStaticProps } from "next";
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,9 +29,13 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
 
+interface Props {
+    data: Article[]
+}
+
 function Hero () {
 
-    const popular = data.filter(get => get.type == "popular")
+    const popular = data.filter((get: { type: string; }) => get.type == "popular")
 
     return (
         <>
@@ -78,3 +84,14 @@ function Hero () {
 }
 
 export default Hero
+
+export const getStaticProps: GetStaticProps = async () => {
+    const res = await fetch('http://localhost:3000/api/article')
+    const data = await res.json()
+
+    return {
+        props: {
+            data: data
+        },
+    }
+}

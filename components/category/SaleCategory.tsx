@@ -13,7 +13,7 @@ const SaleCategory = ({windowWidth}: any) => {
 
     const newData = data.filter(get => get.type == "sales")
 
-    const sales = data.splice(0, 4)
+    const sales = newData.splice(0, 4)
     
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">
