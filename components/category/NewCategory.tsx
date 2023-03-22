@@ -10,13 +10,12 @@ import NewsCard from "../NewsCard"
 import {data} from '../../data/contentData.json'
 
 const NewCategory = ({windowWidth, api}: any) => {
-
-    const newData = data.filter(get => get.type == "new")
+    // const newData = data.filter(get => get.type == "new")
     
-    const newsData = newData.splice(0, 4);
+    // const newsData = newData.splice(0, 4);
 
-    const fetch = api?.data.filter((man: { type: string; }) => man.type == "new")
-    console.log(fetch)
+    const fetch = api?.filter((man: { type: string; }) => man.type == "new")
+    const newsData = fetch.splice(0, 4);
 
     return (
         <div className="px-4 lg:px-10 py-12 xl:flex gap-[25px]">
@@ -28,7 +27,7 @@ const NewCategory = ({windowWidth, api}: any) => {
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
-                        {newsData.map((x) => (
+                        {newsData.map((x: any) => (
                             <Link key={x.title} href={`/articles/${x.id}`}>
                                 <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                     image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -60,7 +59,7 @@ const NewCategory = ({windowWidth, api}: any) => {
                 className="mySwiper mobile"
                 style={{padding: "2rem 1rem"}}
               >
-                {newsData.map((x) => 
+                {newsData.map((x: any) => 
                      (
                         <SwiperSlide key={x.title}>
                             <Link href={`/articles/${x.id}`}>

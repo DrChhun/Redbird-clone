@@ -9,10 +9,13 @@ import Heading from "../Heading"
 import NewsCard from "../NewsCard"
 import {data} from "../../data/contentData.json"
 
-const EstateCategory = ({windowWidth}: any) => {
+const EstateCategory = ({windowWidth, api}: any) => {
 
-    const newData = data.filter(get => get.type == "estate")
+    // const newData = data.filter(get => get.type == "estate")
 
+    // const estate = newData.splice(0, 4)
+
+    const newData = api.filter((get: { type: string; }) => get.type == "estate")
     const estate = newData.splice(0, 4)
     
     return (
@@ -25,7 +28,7 @@ const EstateCategory = ({windowWidth}: any) => {
                 </div>
                 {windowWidth > 768 ?
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] xl:w-[75%]">
-                        {estate.map((x) => (
+                        {estate.map((x: any) => (
                             <Link key={x.id} href={`articles/${x.id}`}>
                                 <NewsCard key={x.title} id={0} image={x.image} title={x.title} tag={x.category} profile={{
                                     image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
@@ -57,7 +60,7 @@ const EstateCategory = ({windowWidth}: any) => {
                 className="mySwiper mobile"
                 style={{padding: "2rem 1rem"}}
               >
-                {estate.map((x) => 
+                {estate.map((x: any) => 
                      (
                         <SwiperSlide key={x.title}>
                             <Link href={`articles/${x.id}`}>

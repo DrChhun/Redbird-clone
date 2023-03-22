@@ -33,9 +33,10 @@ interface Props {
     data: Article[]
 }
 
-function Hero () {
+function Hero ({api}: any) {
 
-    const popular = data.filter((get: { type: string; }) => get.type == "popular")
+    // const popular = data.filter((get: { type: string; }) => get.type == "popular")
+    const popular = api.filter((get: { type: string; }) => get.type == "popular")
 
     return (
         <>
@@ -55,7 +56,7 @@ function Hero () {
                 className="mySwiper h-[100vh] bg-white home-slider"
                 style={{padding: 0}}
             >
-                {popular.map((data) => (
+                {popular.map((data: any) => (
                     <SwiperSlide key={data.title} className="aspect-video">
                         <div className="relative object-cover h-full w-full brightness-[.30]" >
                             <Image 
@@ -85,13 +86,13 @@ function Hero () {
 
 export default Hero
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await fetch('http://localhost:3000/api/article')
-    const data = await res.json()
+// export const getStaticProps: GetStaticProps = async () => {
+//     const res = await fetch('http://localhost:3000/api/article')
+//     const data = await res.json()
 
-    return {
-        props: {
-            data: data
-        },
-    }
-}
+//     return {
+//         props: {
+//             data: data
+//         },
+//     }
+// }

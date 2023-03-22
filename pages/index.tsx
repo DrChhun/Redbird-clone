@@ -14,28 +14,27 @@ import RecentNews from "@/components/category/RecentNews"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Article } from "@/commons/interface";
+import { GetStaticProps } from "next";
 
 interface Props {
     data: Article[]
 }
 
-function Home() {
+function Home({data}: any) {
 
     const [windowWidth, setInnerWidth] = useState<any>();
-    const [api, setApi] = useState<Props | null>()
+    const [api, setApi] = useState<any | null>(data)
 
-    const fetchData = async () => {
-        const res = await fetch('http://localhost:3000/api/article')
-        const get = await res.json()
-        const data = get
-        setApi(data)
-        console.log(data, "TTgg")
-    }
+    // const fetchData = async () => {
+    //     const res = await fetch('http://localhost:3000/api/article')
+    //     const get = await res.json()
+    //     const data = get
+    //     setApi(data)
+    //     console.log(data, "TTgg")
+    // }
 
     useEffect(() => {
         setInnerWidth(window.innerWidth) //set value to widowWidth state
-
-        fetchData()
 
         const handleWidth = () => {
             setInnerWidth(window.innerWidth)
@@ -44,7 +43,7 @@ function Home() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log('width:', windowWidth)
+    // console.log('width:', windowWidth)
 
     return (
         <>
@@ -52,7 +51,7 @@ function Home() {
             <Navigation />
 
             {/* hero */}
-            <Hero />
+            <Hero api={api}/>
 
             {/* title */}
             {/* <div className="px-4 lg:px-10 py-12">
@@ -70,22 +69,34 @@ function Home() {
             <NewCategory windowWidth={windowWidth} api={api}/>
 
             {/* category Business */}
-            <BusinessCategory windowWidth={windowWidth} />
+            <BusinessCategory windowWidth={windowWidth} api={api}/>
 
             {/* category Real-Estate */}
-            <EstateCategory windowWidth={windowWidth} />
+            <EstateCategory windowWidth={windowWidth} api={api}/>
 
             {/* category by content */}
-            <LeadershipCategory windowWidth={windowWidth} />
+            <LeadershipCategory windowWidth={windowWidth} api={api}/>
 
             {/* category by content */}
-            <FinanceCategory windowWidth={windowWidth} />
+            <FinanceCategory windowWidth={windowWidth} api={api}/>
 
             {/* category by content */}
-            <SaleCategory windowWidth={windowWidth} />
+            <SaleCategory windowWidth={windowWidth} api={api}/>
 
         </>
     )
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    
+    const res = await fetch('http://localhost:3000/api/article')
+    const jsonData = await res.json()
+    
+    return {
+      props: {
+        data: jsonData.data
+      }, 
+    }
 }
 
 export default Home
