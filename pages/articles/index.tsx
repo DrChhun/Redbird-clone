@@ -12,12 +12,12 @@ interface Props {
 
 const Artical = ({data}: Props) => {
 
-    // const [req, setReq] = useState<number>(10)
-    // const limit = data.splice(0, req);
+    // const [req, setReq] = useState<number>(20)
+    // const limit = data.splice(0, 105);
 
     // const getMore = () => {
     //     setTimeout(() => {
-    //         setReq(req + 10)
+    //         setReq(req + 20)
     //     }, 500);
     // }
 
