@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Article } from "@/commons/interface";
 import { GetStaticProps } from "next";
+import { NextSeo } from "next-seo"
 
 interface Props {
     data: Article[]
@@ -37,6 +38,10 @@ const Home:React.FC<Props> = ({data}) => {
 
     return (
         <>
+            <NextSeo
+                title="Redbird news"
+                description="Welcome to our news company"
+            />
             {/* navbar */}
             <Navigation />
 
