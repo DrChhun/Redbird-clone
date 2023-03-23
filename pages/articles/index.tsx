@@ -37,7 +37,7 @@ const Artical = ({data}: Props) => {
                     {data.map((data) => {
                         return (
                             <>
-                                <Link href={`/articles/${data.id}`}>
+                                <Link href={`/articles/${data.id}`} passHref>
                                     <NewsCard id={0} image={data.image} title={data.title} tag={data.category} profile={{
                                         image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
                                         name: "fortnite",
@@ -54,7 +54,7 @@ const Artical = ({data}: Props) => {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
     
     const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article')
     const jsonData = await res.json()

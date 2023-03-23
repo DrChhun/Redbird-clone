@@ -35,7 +35,7 @@ const ArticleDetail = ({data}: Props) => {
 
     return (
         <div className="py-12 py-24 lg:py-24 px-4 lg:px-36">
-            {data.map((data) => {
+            {data?.map((data) => {
                 return (
                     <div key={data.id}>
                         <Title lineHeight="normal" size="xxxl">{data.title}</Title>
@@ -60,7 +60,26 @@ const ArticleDetail = ({data}: Props) => {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article');
+  const data = await res.json();
+
+  const paths = data.data.map((get: { id: any }) => {
+    return {
+      params: {
+        articleId: `${get.id}`
+      }
+    }
+  })
+
+  return {
+    paths,
+    fallback: false, // can also be true or 'blocking'
+  }
+}
+
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
   
   const {params} = context
   const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article/${params?.articleId}`)

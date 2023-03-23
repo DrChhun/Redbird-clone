@@ -55,7 +55,7 @@ function Leadership({data}: Props) {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
     
     const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article')
     const jsonData = await res.json()

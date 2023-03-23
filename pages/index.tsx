@@ -24,15 +24,6 @@ const Home:React.FC<Props> = ({data}) => {
 
     const [windowWidth, setInnerWidth] = useState<any>();
     const [api, setApi] = useState<Article[]>(data)
-    
-
-    // const fetchData = async () => {
-    //     const res = await fetch('http://localhost:3000/api/article')
-    //     const get = await res.json()
-    //     const data = get
-    //     setApi(data)
-    //     console.log(data, "TTgg")
-    // }
 
     useEffect(() => {
         setInnerWidth(window.innerWidth) //set value to widowWidth state
@@ -89,7 +80,7 @@ const Home:React.FC<Props> = ({data}) => {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
     const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article`)
     const data = await res.json()
     
