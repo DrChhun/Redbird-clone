@@ -3,7 +3,7 @@ import NewsCard from "@/components/NewsCard"
 import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { GetServerSideProps } from "next"
+import { GetStaticProps } from "next"
 import { Article } from "@/commons/interface"
 
 interface Props {
@@ -55,7 +55,7 @@ function Sales({data}: Props) {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
     
     const res = await fetch('https://redbird-api.vercel.app/api/article')
     const jsonData = await res.json()
