@@ -78,7 +78,7 @@ const Home:React.FC<Props> = ({data}) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-    const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article`)
+    const res = await fetch(`https://redbird-api.vercel.app/api/article`)
     const data = await res.json()
     
     return {

@@ -60,7 +60,7 @@ const ArticleDetail = ({data}: Props) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article');
+  const res = await fetch('https://redbird-api.vercel.app/api/article');
   const data = await res.json();
 
   const paths = data.data.map((get: { id: any }) => {
@@ -81,7 +81,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   
   const {params} = context
-  const res = await fetch(`https://chic-brigadeiros-cb5e20.netlify.app/api/article/${params?.articleId}`)
+  const res = await fetch(`https://redbird-api.vercel.app/api/article/${params?.articleId}`)
   const jsonData = await res.json()
   
   return {

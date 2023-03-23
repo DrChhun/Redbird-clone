@@ -58,7 +58,7 @@ function News({data}: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
     
-    const res = await fetch('https://chic-brigadeiros-cb5e20.netlify.app/api/article')
+    const res = await fetch('https://redbird-api.vercel.app/api/article')
     const jsonData = await res.json()
     
     return {
