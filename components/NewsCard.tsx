@@ -34,7 +34,6 @@ const toBase64 = (str: string) =>
 
 const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
   <>
-    {/* <div className="flex justify-between flex-col m-auto bg-white shadow-xl rounded-xl hover:shadow-lg duration-300 hover:cursor-pointer overflow-hidden group min-h-[450px] sm:min-h-[350px] md:min-h-[340px] md:max-h-[340px] lg:min-h-[390px] lg:max-h-[500px] xl:min-h-[350px]"> */}
     <div className="flex newscard h-[380px] justify-between flex-col bg-white shadow-xl rounded-xl hover:shadow-lg duration-300 hover:cursor-pointer overflow-hidden group h-full">
       <div>
         <Image

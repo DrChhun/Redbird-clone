@@ -5,10 +5,8 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import Title from "@/components/Title";
 import PostDetail from "@/components/PostDetail";
 import Button from "@/components/Button";
-import {data} from '../../data/contentData.json'
 import Image from "next/image";
 import { Article } from "@/commons/interface";
-import { GetStaticProps } from "next";
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -34,8 +32,7 @@ interface Props {
 }
 
 function Hero ({api}: Props) {
-
-    // const popular = data.filter((get: { type: string; }) => get.type == "popular")
+    
     const popular = api?.filter((get) => get.type == "popular")
 
     return (
@@ -85,14 +82,3 @@ function Hero ({api}: Props) {
 }
 
 export default Hero
-
-// export const getStaticProps: GetStaticProps = async () => {
-//     const res = await fetch('http://localhost:3000/api/article')
-//     const data = await res.json()
-
-//     return {
-//         props: {
-//             data: data
-//         },
-//     }
-// }

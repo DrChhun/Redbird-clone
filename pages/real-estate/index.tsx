@@ -1,10 +1,9 @@
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
-import {data} from '../../data/contentData.json'
 import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { GetServerSideProps, GetStaticProps } from "next"
+import { GetStaticProps } from "next"
 import { Article } from "@/commons/interface"
 
 interface Props {

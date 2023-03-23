@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { Article } from "@/commons/interface"
-import { GetServerSideProps, GetStaticProps } from "next"
+import { GetStaticProps } from "next"
 
 interface Props {
     data: Article[]

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,9 +13,6 @@ interface Props {
 }
 
 const NewCategory = ({windowWidth, api}: Props) => {
-    // const newData = data.filter(get => get.type == "new")
-    
-    // const newsData = newData.splice(0, 4);
 
     const fetch = api?.filter((man) => man.type == "new")
     const newsData = fetch?.splice(0, 4);

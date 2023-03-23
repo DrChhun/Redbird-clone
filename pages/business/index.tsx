@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { Article } from "@/commons/interface"
-import { GetServerSideProps, GetStaticProps } from "next"
+import { GetStaticProps } from "next"
 
 interface Props {
     data: Article[]
@@ -50,20 +50,6 @@ const Business = ({data}: Props) => {
                             </>
                         )
                     })}
-                    {/* {newData.map(article => {
-                        return (
-                            <>
-                                <Link href={`/articles/${article.id}`}>
-                                    <NewsCard id={0} image={article.image} title={article.title} tag={article.category} profile={{
-                                        image:"https://business-cambodia.com/cms/assets/23d3a23b-2baf-4802-a2ed-5e9465500843",
-                                        name: "fortnite",
-                                        date: "March 23 2023",
-                                        view: 999
-                                    }} />
-                                </Link>
-                            </>
-                        )
-                    })} */}
                 </div>
             </InfiniteScroll>
         </>

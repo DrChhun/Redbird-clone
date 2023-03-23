@@ -43,7 +43,6 @@ const Heading = ({ weight, size, children, underline, colors, underlineColor }: 
     <div>
       <h1 className={caption({size, weight, colors})}>{children}</h1>
       <hr className={caption({underlineColor})} />
-      {/* <hr className={classNames(`h-1 mt-4 {underlineColor}`, {'w-[50px]' : underline} )} /> */}
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,10 +14,6 @@ interface Props {
 }
 
 const EstateCategory = ({windowWidth, api}: Props) => {
-
-    // const newData = data.filter(get => get.type == "estate")
-
-    // const estate = newData.splice(0, 4)
 
     const newData = api?.filter((get) => get.type == "estate")
     const estate = newData?.splice(0, 4)

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,9 +15,6 @@ interface Props {
 
 const LeadershipCategory = ({windowWidth, api}: Props) => {
 
-    // const newData = data.filter(get => get.type == "leadership")
-
-    // const leadership = newData.splice(0, 4)
     const newData = api?.filter((get) => get.type == "leadership")
     const leadership = newData?.splice(0, 4)
     

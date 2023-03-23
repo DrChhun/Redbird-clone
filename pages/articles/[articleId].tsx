@@ -1,9 +1,8 @@
 import { Article } from "@/commons/interface"
 import PostDetail from "@/components/PostDetail"
 import Title from "@/components/Title"
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image"
-import { useRouter } from "next/router"
 
 interface Props {
     data: Article[]

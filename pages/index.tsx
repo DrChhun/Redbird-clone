@@ -1,4 +1,3 @@
-import Heading from "@/components/Heading"
 import Title from "@/components/Title"
 import Hero from "../components/hero"
 import Navigation from "../components/navigation"
@@ -14,7 +13,7 @@ import RecentNews from "@/components/category/RecentNews"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Article } from "@/commons/interface";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 
 interface Props {
     data: Article[]
@@ -35,8 +34,6 @@ const Home:React.FC<Props> = ({data}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
 
     }, [])
-
-    // console.log('width:', windowWidth)
 
     return (
         <>
