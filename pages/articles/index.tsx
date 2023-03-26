@@ -5,6 +5,8 @@ import Paginate from "@/components/Paginate"
 import ReactPaginate from "@/components/RPaginate"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import Skeleton from "react-loading-skeleton"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 interface Props {
     data: Article[]
@@ -17,6 +19,7 @@ const Artical = () => {
     const [api, setApi] = useState<Props>()
     const [total, setTotal] = useState<number | null>(null)
     const [currentPage, setCurrentPage] = useState<number>(1)
+    let loading = [1,2,3,4,5,6,7,8,9,10]
     console.log(currentPage)
 
     useEffect(() => {
@@ -62,7 +65,14 @@ const Artical = () => {
                     })}
                 </div>
             :
-                <p className="text-center p-16">loading...</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
+                    {loading.map(get => {
+                        return (
+                            <Skeleton key={get} className="h-[365px]" />
+                        )
+                    })}
+                </div>
+
             }
             
             {/* <Paginate total={total} setCurrentPage={setCurrentPage} currentPage={currentPage} /> */}
