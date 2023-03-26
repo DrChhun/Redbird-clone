@@ -1,9 +1,5 @@
-//robots.txt
+user-agent: *
+disallow: /downloads/
 
-# Block all crawlers for /accounts
-User-agent: *
-Disallow: /admin
-
-# Allow all crawlers
-User-agent: *
-Allow: /
+user-agent: magicsearchbot
+disallow: /uploads/

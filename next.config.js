@@ -5,14 +5,14 @@ const nextConfig = {
   images: {
     domains: ['business-cambodia.com']
   },
-  // async rewrite() {
-  //   return [
-  //     {
-  //       source: 'api/:path*',
-  //       destination: `${[process.env.NEXT_PUBLIC_API_URL]}/api/:path*`
-  //     }
-  //   ]
-  // }
+  async rewrite() {
+    return [
+      {
+        source: '/api/article',
+        destination: `https://redbird-api.vercel.app`
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

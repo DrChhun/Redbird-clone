@@ -1,25 +1,32 @@
 import { Article } from "@/commons/interface"
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
-import { GetServerSideProps, GetStaticProps } from "next"
+import Paginate from "@/components/Paginate"
 import Link from "next/link"
-import { useState } from "react"
-import InfiniteScroll from "react-infinite-scroll-component"
+import { useEffect, useState } from "react"
 
 interface Props {
     data: Article[]
 }
 
-const Artical = ({data}: Props) => {
+const Artical = () => {
 
-    // const [req, setReq] = useState<number>(20)
-    // const limit = data.splice(0, 105);
+    const [api, setApi] = useState<Props>()
+    const [total, setTotal] = useState<number | null>(null)
+    const [currentPage, setCurrentPage] = useState<number>(1)
+    console.log(currentPage)
 
-    // const getMore = () => {
-    //     setTimeout(() => {
-    //         setReq(req + 20)
-    //     }, 500);
-    // }
+    useEffect(() => {
+        const getData = async () => {
+            const res = await fetch(`https://redbird-api.vercel.app/api/articles?page=${currentPage}`)
+            const data = await res.json()
+            setApi(data)
+            setTotal(data.pageCount)
+            console.log(data)
+        };
+
+        getData();
+    }, [currentPage])
 
     return (
         <>
@@ -27,14 +34,9 @@ const Artical = ({data}: Props) => {
                 អត្ថបទទាំងអស់
             </Banner>
 
-            {/* <InfiniteScroll
-                dataLength={limit.length}
-                next={getMore}
-                hasMore={true}
-                loader={<p className="hidden">loading...</p>}
-            > */}
+            {api? 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {data.map((data) => {
+                    {api?.data.map((data) => {
                         return (
                             <>
                                 <Link href={`/articles/${data.id}`} passHref>
@@ -49,21 +51,13 @@ const Artical = ({data}: Props) => {
                         )
                     })}
                 </div>
-            {/* </InfiniteScroll> */}
+            :
+                <p className="text-center p-16">loading...</p>
+            }
+            
+            <Paginate total={total} setCurrentPage={setCurrentPage} currentPage={currentPage} />
         </>
     )
-}
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    
-    const res = await fetch('https://redbird-api.vercel.app/api/article')
-    const jsonData = await res.json()
-    
-    return {
-      props: {
-        data: jsonData.data
-      }, 
-    }
 }
 
 export default Artical
