@@ -2,6 +2,7 @@ import { Article } from "@/commons/interface"
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
 import Paginate from "@/components/Paginate"
+import ReactPaginate from "@/components/RPaginate"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const Artical = () => {
+
+    const [windowWidth, setInnerWidth] = useState<any>();
 
     const [api, setApi] = useState<Props>()
     const [total, setTotal] = useState<number | null>(null)
@@ -24,6 +27,13 @@ const Artical = () => {
             setTotal(data.pageCount)
             console.log(data)
         };
+
+        setInnerWidth(window.innerWidth) //set value to widowWidth state
+
+        const handleWidth = () => {
+            setInnerWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleWidth)
 
         getData();
     }, [currentPage])
@@ -55,7 +65,8 @@ const Artical = () => {
                 <p className="text-center p-16">loading...</p>
             }
             
-            <Paginate total={total} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+            {/* <Paginate total={total} setCurrentPage={setCurrentPage} currentPage={currentPage} /> */}
+            <ReactPaginate windowWidth={windowWidth} total={total} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
         </>
     )
 }
