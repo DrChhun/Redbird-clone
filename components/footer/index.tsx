@@ -38,6 +38,12 @@ function Footer() {
                                 <li>
                                     <Link href="/sales">កំពូលអ្នកលក់</Link>
                                 </li>
+                                <li>
+                                    <a href="www.facebook.com">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="www.youtube.com">Youtube</a>
+                                </li>
                                 {/* <li>របាយការណ៍</li>
                                 <li>អត្ថបទ</li>
                                 <li>មុខរបរបច្ចេកវិទ្យា</li>
