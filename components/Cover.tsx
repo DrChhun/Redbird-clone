@@ -41,7 +41,7 @@ const Cover = ({img, children, link, heading, fontSize, underlineColor}: Props) 
                 width={1920} 
                 className="relative row-span-3 h-full w-full object-cover group-hover:scale-105 duration-300 brightness-[.30]" 
                 src={img} 
-                alt="coverImage" 
+                alt="coverImage, red, bird, clone" 
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             />
