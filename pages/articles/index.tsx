@@ -1,9 +1,9 @@
 import { Article } from "@/commons/interface"
 import Banner from "@/components/Banner"
 import NewsCard from "@/components/NewsCard"
-import Paginate from "@/components/Paginate"
 import ReactPaginate from "@/components/RPaginate"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -13,16 +13,19 @@ interface Props {
 }
 
 const Artical = () => {
-
+    
     const [windowWidth, setInnerWidth] = useState<any>();
-
+    const router = useRouter();
     const [api, setApi] = useState<Props>()
     const [total, setTotal] = useState<number | null>(null)
-    const [currentPage, setCurrentPage] = useState<number>(1)
-    let loading = [1,2,3,4,5,6,7,8,9,10]
-    console.log(currentPage)
 
+    //trying to push page query to currentPage state
+    let param: any = router.query.page;
+    console.log("here", param);
+    const [currentPage, setCurrentPage] = useState<number>(param || 1)
+    
     useEffect(() => {
+        
         const getData = async () => {
             const res = await fetch(`https://redbird-api.vercel.app/api/articles?page=${currentPage}`)
             const data = await res.json()
@@ -31,16 +34,19 @@ const Artical = () => {
             console.log(data)
         };
 
-        setInnerWidth(window.innerWidth) //set value to widowWidth state
-
+        //router will be shown undefine because useEffect will run first and <<let param>> will run later
+        router.push(`/articles?page=${currentPage}`)
+        getData();
+        
+        setInnerWidth(window.innerWidth)
+        
         const handleWidth = () => {
             setInnerWidth(window.innerWidth)
         }
         window.addEventListener('resize', handleWidth)
-
-        getData();
-    }, [currentPage])
-
+        
+    }, [currentPage]);
+    
     return (
         <>
             <Banner colors="white" size="xl" weight="bold" image="https://business-cambodia.com/cms/assets/8812fd3e-50da-4b00-bd05-66a20b3f8241">
@@ -66,7 +72,7 @@ const Artical = () => {
                 </div>
             :
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-12 px-4 lg:px-10 gap-[25px]">
-                    {loading.map(get => {
+                    {[...Array(10)].map(get => {
                         return (
                             <Skeleton key={get} className="h-[365px]" />
                         )

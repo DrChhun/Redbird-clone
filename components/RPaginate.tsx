@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ReactPaginate from "react-paginate"
 
 interface Props {
@@ -41,16 +41,17 @@ const RPaginate = ({total, setCurrentPage, currentPage, windowWidth}: Props) => 
         <>  
             {windowWidth > 600 ?
                 <ReactPaginate
-                    className={`pagination flex justify-center gap-5`}
+                    className={`pagination flex justify-center`}
                     breakLabel="..."
-                    nextLabel="next >"
+                    nextLabel=""
                     onPageChange={handlePageClick}
                     pageCount={total}
-                    previousLabel="< previous"
+                    previousLabel=""
                     containerClassName="pagination"
+                    activeClassName="px-1 border-b-2 border-black"
                 />
             : 
-                <div className="flex justify-center gap-5">
+                <div className="flex justify-center ">
                     <button className="mobile-pagination" onClick={() => handlePrev()}>Prev</button>
                     <button className="mobile-pagination" onClick={() => handleNext()}>Next</button>
                 </div>

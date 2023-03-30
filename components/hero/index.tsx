@@ -60,7 +60,7 @@ function Hero ({api}: Props) {
                                 className="object-cover"
                                 fill
                                 src={data.image} 
-                                alt="" 
+                                alt="hero-image" 
                                 placeholder="blur"
                                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                             />

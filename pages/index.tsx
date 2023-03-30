@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 import { Article } from "@/commons/interface";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo"
+import Head from "next/head";
 
 interface Props {
     data: Article[]
@@ -38,10 +39,16 @@ const Home:React.FC<Props> = ({data}) => {
 
     return (
         <>
-            <NextSeo
+            <Head>
+                <title>Red Bird Clone</title>
+                <meta name="description" content="Internship task" />
+                <meta property="og:title" content="My 2 cloned website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            {/* <NextSeo
                 title="Redbird news"
                 description="Welcome to our news company"
-            />
+            /> */}
             {/* navbar */}
             <Navigation />
 

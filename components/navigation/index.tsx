@@ -44,7 +44,7 @@ function Navigation() {
         <div className={`fixed px-6 py-4 z-[9] w-full flex justify-between items-center duration-300 ${router.asPath.startsWith("/articles") ? 'text-white' : ""} ${router.asPath.startsWith('/articles') ? 'bg-white shadow-md' : ""} ${!visible ? 'top-[-15%]': "top-0 bg-white shadow-sm" } ${prevScrollPos == 0 ? '!bg-transparent': ""}`}>
             
             <Link href="/">
-                <Image fill className="!relative !w-20 !h-12" src="https://business-cambodia.com/BC.png" alt="" />
+                <Image fill className="!relative !w-20 !h-12" src="https://business-cambodia.com/BC.png" alt="favicon" />
             </Link>
             
         {router.asPath.startsWith('/articles') ? 
