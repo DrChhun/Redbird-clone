@@ -41,8 +41,8 @@ const Home:React.FC<Props> = ({data}) => {
         <>
             <Head>
                 <title>Red Bird Clone</title>
-                <meta name="description" content="Internship task" />
-                <meta property="og:title" content="My 2 cloned website" />
+                <meta name="description" content="Internship task, red, bird, clone" />
+                <meta property="og:title" content="My 2 cloned website, red, bird, clone" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* <NextSeo
