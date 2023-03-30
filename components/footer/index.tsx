@@ -54,7 +54,7 @@ function Footer() {
                 </div>
                 <div className="text-center">
                     <div className="h-32 w-32"></div>
-                    <h1 className="font-bold">Redbird News</h1>
+                    <h1 className="font-bold">red bird clone</h1>
                     <p className="text-xs lg:text-base">បំផុសគំនិតរកសុី នាំមនុស្សអោយហ៊ានចេញរកសុីតាមក្តីស្រមៃ</p>
                 </div>
             </div>
