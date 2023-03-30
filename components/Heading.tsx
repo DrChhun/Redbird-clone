@@ -41,7 +41,7 @@ extends ButtonHTMLAttributes<HTMLButtonElement>,
 const Heading = ({ weight, size, children, underline, colors, underlineColor }: Heading) => {
   return (
     <div>
-      <h1 className={caption({size, weight, colors})}>{children}</h1>
+      <h2 className={caption({size, weight, colors})}>{children}</h2>
       <hr className={caption({underlineColor})} />
     </div>
   );

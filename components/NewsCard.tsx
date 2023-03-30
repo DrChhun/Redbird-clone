@@ -46,9 +46,9 @@ const NewsCard: React.FC<News> = ({ image, title, tag, profile }) => (
           blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
         />
           <p className="m-4 bg-gray-200 w-max px-4 pt-1 rounded-lg mb-4 text-xs">#{tag}</p>
-          <h1 className="px-4 font-bold text-base text-gray-600 hover:underline">
+          <h2 className="px-4 font-bold text-base text-gray-600 hover:underline">
             <div className="line-clamp-2">{title}</div>
-          </h1>
+          </h2>
       </div>
       <div className="px-4">
         <CardProfile
