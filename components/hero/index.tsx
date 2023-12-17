@@ -20,65 +20,81 @@ const shimmer = (w: number, h: number) => `
   <rect width="${w}" height="${h}" fill="#e0e0e0" />
   <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur=".5s" repeatCount="indefinite"  />
-</svg>`
+</svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str);
 
 interface Props {
-    api: Article[]  
+  api: Article[];
 }
 
-function Hero ({api}: Props) {
-    
-    const popular = api?.filter((get) => get.type == "popular")
+function Hero({ api }: Props) {
+  const popular = api?.filter((get) => get.type == "popular");
 
-    return (
-        <>
-            <Swiper
-                loop={true}
-                centeredSlides={true}
-                autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-                }}
-                pagination={{
-                clickable: true,
-                }}
-                spaceBetween={0}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper h-[100vh] bg-white home-slider"
-                style={{padding: 0}}
-            >
-                {popular?.map((data) => (
-                    <SwiperSlide key={data.title} className="aspect-video">
-                        <div className="relative object-cover h-full w-full brightness-[.30]" >
-                            <Image 
-                                className="object-cover"
-                                fill
-                                src={data.image} 
-                                alt="hero-image" 
-                                placeholder="blur"
-                                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-                            />
-                        </div>
-            
-                        <div className="absolute w-full md:w-4/5 lg:w-2/4 top-[30%] lg:top-1/4 py-0 px-10 sm:p-10 md:pl-10">
-                            <Title size="xxxl" lineHeight="normal" colors="white">{data.title}</Title>
-                            <div className="my-5"><PostDetail author={data.author.name} category={data.category} date={data.date} colors="white" /></div>
-                            <div className="flex">
-                                <div className="mr-5"><Button url={`articles/${data.id}`} styles="fill">បន្តការអាន</Button></div>
-                                <Button url={`articles/${data.id}`} styles="transparent">អំពីអ្នកនិពន្ធ</Button>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </>
-    )
+  return (
+    <>
+      <Swiper
+        loop={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        spaceBetween={0}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper h-[100vh] bg-white home-slider"
+        style={{ padding: 0 }}
+      >
+        {popular?.map((data) => (
+          <SwiperSlide key={data.title} className="aspect-video">
+            <div className="relative object-cover h-full w-full brightness-[.30]">
+              <Image
+                className="object-cover"
+                fill
+                src={data.image}
+                alt="hero-image"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(700, 475)
+                )}`}
+              />
+            </div>
+
+            <div className="absolute w-full md:w-4/5 lg:w-2/4 top-[30%] lg:top-1/4 py-0 px-10 sm:p-10 md:pl-10">
+              <Title size="xxxl" lineHeight="normal" colors="white">
+                {data.title}
+              </Title>
+              <div className="my-5">
+                <PostDetail
+                  author={data.author.name}
+                  category={data.category}
+                  date={data.date}
+                  colors="white"
+                />
+              </div>
+              <div className="flex">
+                <div className="mr-5">
+                  <Button url={`articles/${data.id}`} styles="fill">
+                    បន្តការអាន
+                  </Button>
+                </div>
+                <Button url={`articles/${data.id}`} styles="transparent">
+                  អំពីអ្នកនិពន្ធ
+                </Button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
 }
 
-export default Hero
+export default Hero;
